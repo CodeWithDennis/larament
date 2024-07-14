@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\App\Profile;
 use App\Filament\Pages\Auth\Login;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -30,6 +31,7 @@ class AdminPanelProvider extends PanelProvider
             ->login(Login::class)
             ->registration()
             ->spa()
+            ->profile(Profile::class, false)
             ->colors([
                 'primary' => Color::Amber,
             ])
