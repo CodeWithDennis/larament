@@ -42,5 +42,10 @@ This package allows you to run one-time operations in your Laravel application. 
 
 > This package is only installed in the development environment.
 
+
+### [pestphp/pest](https://pestphp.com/docs/installation)
+
+> Including `pestphp/pest-plugin-faker`, `pestphp/pest-plugin-laravel` and `pestphp/pest-plugin-livewire`.
+
 This package provides a developer toolbar for debugging Laravel applications. It includes a lot of helpful information like queries, routes, views, and more.
 
