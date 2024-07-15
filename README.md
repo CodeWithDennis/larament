@@ -12,6 +12,11 @@ composer install
 npm install && npm run build
 cp .env.example .env
 php artisan key:generate
+```
+
+By [default](https://laravel.com/docs/11.x/releases#application-defaults) the project uses **SQLite** as the database. If you want to use another database, update the `.env` file with your database preferences before running the migration.
+
+```bash
 php artisan migrate --seed
 ```
 
