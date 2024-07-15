@@ -28,7 +28,6 @@ class UserResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('name')
                             ->required()
-                            ->minLength(3)
                             ->maxLength(255),
                         Forms\Components\TextInput::make('email')
                             ->email()
