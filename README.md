@@ -20,6 +20,11 @@ By [default](https://laravel.com/docs/11.x/releases#application-defaults) the pr
 php artisan migrate --seed
 ```
 
+## Filament Customization
+- [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
+- Registration is turned on by default.
+- In a local environment, the custom login page automatically fills in the login details for the default user.
+- The custom profile page is enabled by default and includes a button to generate a password.
 ## Packages
 
 ### [timokoerber/laravel-one-time-operations](https://github.com/TimoKoerber/laravel-one-time-operations)
