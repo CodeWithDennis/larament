@@ -14,3 +14,16 @@ cp .env.example .env
 php artisan key:generate
 php artisan migrate --seed
 ```
+
+## Packages
+
+### [timokoerber/laravel-one-time-operations](https://github.com/TimoKoerber/laravel-one-time-operations)
+This package allows you to run one-time operations in your Laravel application. Instead of adding a new migration for a simple task, you can use this package to run the operation only once.
+
+### [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+
+> [!NOTE]
+> This package is only installed in the development environment.
+
+This package provides a developer toolbar for debugging Laravel applications. It includes a lot of helpful information like queries, routes, views, and more.
+
