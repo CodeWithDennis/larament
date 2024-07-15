@@ -32,6 +32,7 @@ php artisan migrate --seed
 ### Customizations
 - Custom login page that automatically fills in the login details with the seeded user. (Local environment only)
 - A custom profile page.
+- A custom action for generating passwords on the user's profile page.
 - A [custom admin theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) is ready to be used.
 
 ## Packages
