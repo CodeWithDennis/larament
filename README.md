@@ -1,6 +1,9 @@
 # Larament
 Kickstart your project and save time with Larament! This time-saving starter kit includes a Laravel project with FilamentPHP already installed and set up, along with extra features.
 
+> [!NOTE]
+> This starter kit includes Laravel 11 and FilamentPHP 3, along with some extra packages and small customizations to help you start quickly. You can add more tools and adjust the project as you want.
+
 ![larament.png](larament.png)
 
 ## Installation
@@ -24,7 +27,7 @@ php artisan migrate --seed
 - [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
 - Registration is turned on by default.
 - In a local environment, the custom login page automatically fills in the login details for the default user.
-- The custom profile page is enabled by default and includes a button to generate a password.
+- The profile page is enabled by default and includes a button to generate a password.
 ## Packages
 
 ### [timokoerber/laravel-one-time-operations](https://github.com/TimoKoerber/laravel-one-time-operations)
