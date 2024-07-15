@@ -1,0 +1,5 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+/* Here you can add your CSS for the admin panel theme */
