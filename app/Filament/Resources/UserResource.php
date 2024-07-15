@@ -38,6 +38,7 @@ class UserResource extends Resource
                         TextInput::make('password')
                             ->label(__('filament-panels::pages/auth/edit-profile.form.password.label'))
                             ->password()
+                            ->required(fn($livewire) => $livewire instanceof Pages\CreateUser)
                             ->revealable(filament()->arePasswordsRevealable())
                             ->rule(Password::default())
                             ->autocomplete('new-password')
