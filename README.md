@@ -22,7 +22,7 @@ This package allows you to run one-time operations in your Laravel application. 
 
 ### [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 
-> [!NOTE] This package is only installed in the development environment.
+> This package is only installed in the development environment.
 
 This package provides a developer toolbar for debugging Laravel applications. It includes a lot of helpful information like queries, routes, views, and more.
 
