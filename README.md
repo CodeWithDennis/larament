@@ -1,5 +1,5 @@
 # Larament
-Larament is a Laravel and FilamentPHP starter kit, it contains a Laravel project with FilamentPHP installed and configured with additional features.
+Kickstart your project and save time with Larament! This time-saving starter kit includes a Laravel project with FilamentPHP already installed and set up, along with extra features.
 
 ![larament.png](larament.png)
 
