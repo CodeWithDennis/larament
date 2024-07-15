@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Actions\GeneratePasswordAction;
 use App\Filament\Resources\UserResource\Pages;
 use App\Models\User;
 use Filament\Forms;
@@ -43,7 +44,10 @@ class UserResource extends Resource
                             ->dehydrated(fn ($state): bool => filled($state))
                             ->dehydrateStateUsing(fn ($state): string => Hash::make($state))
                             ->live(debounce: 500)
-                            ->same('passwordConfirmation'),
+                            ->same('passwordConfirmation')
+                            ->suffixActions([
+                                GeneratePasswordAction::make(),
+                            ]),
                         TextInput::make('passwordConfirmation')
                             ->label(__('filament-panels::pages/auth/edit-profile.form.password_confirmation.label'))
                             ->password()
