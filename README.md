@@ -39,13 +39,18 @@ php artisan migrate --seed
 This package allows you to run one-time operations in your Laravel application. Instead of adding a new migration for a simple task, you can use this package to run the operation only once.
 
 ### [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+This package provides a developer toolbar for debugging Laravel applications. It includes a lot of helpful information like queries, routes, views, and more.
 
 > This package is only installed in the development environment.
 
 
 ### [pestphp/pest](https://pestphp.com/docs/installation)
+Pest is a testing framework with a focus on simplicity, meticulously designed to bring back the joy of testing in PHP.
 
-> Including `pestphp/pest-plugin-faker`, `pestphp/pest-plugin-laravel` and `pestphp/pest-plugin-livewire`.
+> This package is only installed in the development environment.
 
-This package provides a developer toolbar for debugging Laravel applications. It includes a lot of helpful information like queries, routes, views, and more.
+#### Additional Plugins
+- [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#faker) 
+- [pestphp/pest-plugin-laravel](https://pestphp.com/docs/plugins#laravel)
+- [pestphp/pest-plugin-livewire](https://pestphp.com/docs/plugins#livewire)
 
