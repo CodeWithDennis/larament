@@ -2,7 +2,7 @@
 Kickstart your project and save time with Larament! This time-saving starter kit includes a Laravel project with FilamentPHP already installed and set up, along with extra features.
 
 > [!NOTE]
-> This starter kit includes Laravel 11 and FilamentPHP 3, along with some extra packages and small customizations to help you start quickly. You can add more tools and adjust the project as you want.
+> This starter kit includes **Laravel 11** and **FilamentPHP 3** with some packages that improve the development experience. This will not contain any bloated features or unnecessary packages. If you want to add more features, you can do so by installing the necessary packages. 
 
 ![larament.png](larament.png)
 
