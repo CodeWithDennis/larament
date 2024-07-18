@@ -60,7 +60,7 @@ A custom profile page that uses the generated password action. You can find the 
 ![generate-password](resources/images/generate-password-action.jpg)
 
 ### Theme
-A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator. You can find the theme stylesheet in the `resources/css/filament/admin` directory.
+A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator. You can find the theme stylesheet in the [resources/css/filament/admin](https://github.com/CodeWithDennis/larament/blob/main/resources/css/filament/admin/theme.css) directory.
 
 ## Packages
 
