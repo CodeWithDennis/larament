@@ -25,9 +25,11 @@ php artisan migrate --seed
 
 ## Filament
 
-### Configurations
-- [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
-- The default color is `Color::Blue`.
+### Panel Color
+The primary color for the Filament Panel is set to `Color::Blue`.
+
+### SPA
+[SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
 
 ### Login
 A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find this login page in the `App\Filament\Pages\Auth` directory.
