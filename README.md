@@ -45,7 +45,7 @@ A custom profile page that uses the generated password action. You can find the 
 ![login.png](resources/images/generate-password-action.jpg)
 
 ### Theme
-A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used. You can find the theme stylesheet in the `resources/css/filament/admin` directory.
+A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used. You can find the empty theme stylesheet in the `resources/css/filament/admin` directory.
 
 ## Packages
 
