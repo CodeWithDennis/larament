@@ -48,7 +48,6 @@ This package provides a developer toolbar for debugging Laravel applications. It
 > [!CAUTION]
 > Keep in mind that the debugbar views collector might slow down your application due to view rendering, but you can turn it off in the debugbar config file if you don't need it.
 
-
 ### [pestphp/pest](https://pestphp.com/docs/installation)
 Pest is a testing framework with a focus on simplicity, meticulously designed to bring back the joy of testing in PHP.
 
@@ -59,3 +58,6 @@ Pest is a testing framework with a focus on simplicity, meticulously designed to
 - [pestphp/pest-plugin-laravel](https://pestphp.com/docs/plugins#laravel)
 - [pestphp/pest-plugin-livewire](https://pestphp.com/docs/plugins#livewire)
 
+## Boilerplate
+The following files are part of the project and can be removed.
+- larament.png
