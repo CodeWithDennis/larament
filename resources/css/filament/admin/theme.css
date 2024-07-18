@@ -2,4 +2,10 @@
 
 @config 'tailwind.config.js';
 
-/* Here you can add your CSS for the admin panel theme */
+.fi-sidebar-nav {
+    border-right: 1px solid #e4e4e5;
+}
+
+.dark .fi-sidebar-nav {
+    border-right: 1px solid #222224;
+}
