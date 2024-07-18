@@ -34,6 +34,13 @@ The primary color for the Filament Panel is set to `Color::Blue`.
 ### Login
 A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find the custom login page in the `App\Filament\Pages\Auth` directory.
 
+![login.png](resources/images/login.png)
+
+### UserResource Complete Tests
+A [PEST](https://pestphp.com/docs/installation) test file for the UserResource that tests all functionalities. You can find the test file in the `tests/Feature/Filament/Resources` directory.
+
+![login.png](resources/images/user-resource-pest.png)
+
 ### User Global Search
 A global search for users that contains the email in the search results.
 
