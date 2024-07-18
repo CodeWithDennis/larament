@@ -4,7 +4,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 > [!NOTE]
 > This starter kit includes **Laravel 11** and **FilamentPHP 3** with some packages that improve the development experience. This will not contain any bloated features or unnecessary packages. If you want to add more features, you can do so by installing the necessary packages. 
 
-![larament.png](larament.png)
+![larament](resources/images/larament.png)
 
 ## Installation
 
@@ -32,13 +32,17 @@ The primary color for the Filament Panel is set to `Color::Blue`.
 [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
 
 ### Login
-A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find this login page in the `App\Filament\Pages\Auth` directory.
+A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find the custom login page in the `App\Filament\Pages\Auth` directory.
+
+![login.png](resources/images/login.png)
 
 ### Generate Password
 A custom action for generating passwords on the user's profile page and user resource. You can find the action in the `App\Filament\Actions` directory.
 
 ### Profile
 A custom profile page that uses the generated password action. You can find the profile page in the `App\Filament\Pages\App` directory.
+
+![login.png](resources/images/generate-password-action.jpg)
 
 ### Theme
 A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used. You can find the theme stylesheet in the `resources/css/filament/admin` directory.
