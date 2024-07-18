@@ -15,6 +15,11 @@ it('can render the index page', function () {
         ->assertSuccessful();
 });
 
+it('can render the create page', function () {
+    livewire(CreateUser::class)
+        ->assertSuccessful();
+});
+
 it('can render the edit page', function () {
     $record = User::factory()->create();
 
