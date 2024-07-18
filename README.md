@@ -4,8 +4,6 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 > [!NOTE]
 > This starter kit includes **Laravel 11** and **FilamentPHP 3** with some packages that improve the development experience. This will not contain any bloated features or unnecessary packages. If you want to add more features, you can do so by installing the necessary packages. 
 
-![larament](resources/images/larament.png)
-
 ## Installation
 
 **[Use this template](https://github.com/new?template_name=larament&template_owner=CodeWithDennis)** to create a new repository and clone it to your local machine, then navigate to the project directory to run the necessary commands.
