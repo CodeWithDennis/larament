@@ -35,6 +35,12 @@ A custom login page that **automatically** fills in the email and password field
 
 ![login](resources/images/login.png)
 
+### Global Search Keybinding
+
+The global search keybinding is set to `CTRL + K` or `CMD + K` for macOS by default.
+
+![global-search-keybinding](resources/images/global-search-keybinding.jpg)
+
 ### UserResource PEST Tests
 A test file for the UserResource that tests all functionalities. You can find the test file in the [tests/Feature/Filament/Resources](https://github.com/CodeWithDennis/larament/blob/main/tests/Feature/Filament/Resources/UserResourceTest.php) directory.
 
