@@ -80,5 +80,9 @@ Pest is a testing framework with a focus on simplicity, meticulously designed to
 - [pestphp/pest-plugin-livewire](https://pestphp.com/docs/plugins#livewire)
 
 ## Boilerplate
-The following files are part of the project and can be removed.
-- larament.png
+The following files are part of the "branding" and can be removed.
+- resources/images/larament.png
+- resources/images/login.png
+- resources/images/user-global-search.jpg
+- resources/images/user-resource-pest.png
+- resources/images/generate-password-action.jpg
