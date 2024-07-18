@@ -30,8 +30,7 @@ php artisan migrate --seed
 - The default color is `Color::Blue`.
 
 ### Login
-A custom login page that automatically fills in the email and password fields on the login page with seeded data. You can find the login page in the `App\Filament\Pages\Auth` directory.
-> This only works in the local environment.
+A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find this login page in the `App\Filament\Pages\Auth` directory.
 
 ### Generate Password
 A custom action for generating passwords on the user's profile page and user resource. You can find the action in the `App\Filament\Actions` directory.
@@ -52,7 +51,7 @@ This package provides a developer toolbar for debugging Laravel applications. It
 
 > This package is only installed in the development environment.
 
-> [!CAUTION]
+> [!NOTE]
 > Keep in mind that the debugbar views collector might slow down your application due to view rendering, but you can turn it off in the debugbar config file if you don't need it.
 
 ### [pestphp/pest](https://pestphp.com/docs/installation)
