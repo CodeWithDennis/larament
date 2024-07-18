@@ -27,13 +27,20 @@ php artisan migrate --seed
 
 ### Configurations
 - [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
-- The profile page is enabled by default.
+- The default color is `Color::Blue`.
 
-### Customizations
-- Custom login page that automatically fills in the login details with the seeded user. (Local environment only)
-- A custom profile page.
-- A custom action for generating passwords on the user's profile page and user resource.
-- A [custom admin theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) is ready to be used.
+### Login
+A custom login page that automatically fills in the email and password fields on the login page with seeded data. You can find the login page in the `App\Filament\Pages\Auth` directory.
+> This only works in the local environment.
+
+### Generate Password
+A custom action for generating passwords on the user's profile page and user resource. You can find the action in the `App\Filament\Actions` directory.
+
+### Profile
+A custom profile page that uses the generated password action. You can find the profile page in the `App\Filament\Pages\App` directory.
+
+### Theme
+A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used. You can find the theme stylesheet in the `resources/css/filament/admin` directory.
 
 ## Packages
 
