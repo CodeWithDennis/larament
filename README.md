@@ -16,8 +16,7 @@ npm install && npm run build
 cp .env.example .env
 php artisan key:generate
 ```
-
-By [default](https://laravel.com/docs/11.x/releases#application-defaults) the project uses **SQLite** as the database. If you want to use another database, update the `.env` file with your database preferences before running the migration.
+Since [Laravel 11](https://laravel.com/docs/11.x/releases#application-defaults) the default database is SQLite, if you want to use another database, update the `.env` file with your database preferences before running the migrations.
 
 ```bash
 php artisan migrate --seed
@@ -32,27 +31,27 @@ The primary color for the Filament Panel is set to `Color::Blue`.
 [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
 
 ### Login
-A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find the custom login page in the `App\Filament\Pages\Auth` directory.
+A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find the custom login page in the [App\Filament\Pages\Auth](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Pages/Auth/Login.php) directory.
 
-![login.png](resources/images/login.png)
+![login](resources/images/login.png)
 
-### UserResource Complete Tests
-A [PEST](https://pestphp.com/docs/installation) test file for the UserResource that tests all functionalities. You can find the test file in the `tests/Feature/Filament/Resources` directory.
+### UserResource PEST Tests
+A test file for the UserResource that tests all functionalities. You can find the test file in the [tests/Feature/Filament/Resources](https://github.com/CodeWithDennis/larament/blob/main/tests/Feature/Filament/Resources/UserResourceTest.php) directory.
 
-![login.png](resources/images/user-resource-pest.png)
+![user-resource-pest-tests](resources/images/user-resource-pest.png)
 
 ### User Global Search
 A global search for users that contains the email in the search results.
 
-![login.png](resources/images/user-global-search.jpg)
+![user-global-search](resources/images/user-global-search.jpg)
 
 ### Generate Password
-A custom action for generating passwords on the user's profile page and user resource. You can find the action in the `App\Filament\Actions` directory.
+A custom action for generating passwords on the user's profile page and user resource. You can find the action in the [App\Filament\Actions](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Actions/GeneratePasswordAction.php) directory.
 
 ### Profile
-A custom profile page that uses the generated password action. You can find the profile page in the `App\Filament\Pages\App` directory.
+A custom profile page that uses the generated password action. You can find the profile page in the [App\Filament\Pages\App](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Pages/App/Profile.php) directory.
 
-![login.png](resources/images/generate-password-action.jpg)
+![generate-password](resources/images/generate-password-action.jpg)
 
 ### Theme
 A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator. You can find the theme stylesheet in the `resources/css/filament/admin` directory.
