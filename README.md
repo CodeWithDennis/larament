@@ -35,7 +35,7 @@ The primary color for the Filament Panel is set to `Color::Blue`.
 A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find the custom login page in the `App\Filament\Pages\Auth` directory.
 
 ### User Global Search
-A custom global search for users that allows you to search for users by their name or email.
+A global search for users that contains the email in the search results.
 
 ![login.png](resources/images/user-global-search.jpg)
 
