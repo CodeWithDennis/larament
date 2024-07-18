@@ -46,7 +46,7 @@ This package provides a developer toolbar for debugging Laravel applications. It
 > This package is only installed in the development environment.
 
 > [!CAUTION]
-> Keep in mind that it might slow down your application due to the view rendering. This is because of the debugbar views collector. If you don't need this feature, you can turn it off in your debugbar config file.
+> Keep in mind that the debugbar views collector might slow down your application due to view rendering, but you can turn it off in the debugbar config file if you don't need it.
 
 
 ### [pestphp/pest](https://pestphp.com/docs/installation)
