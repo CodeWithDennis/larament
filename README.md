@@ -34,7 +34,10 @@ The primary color for the Filament Panel is set to `Color::Blue`.
 ### Login
 A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find the custom login page in the `App\Filament\Pages\Auth` directory.
 
-![login.png](resources/images/login.png)
+### User Global Search
+A custom global search for users that allows you to search for users by their name or email.
+
+![login.png](resources/images/user-global-search.jpg)
 
 ### Generate Password
 A custom action for generating passwords on the user's profile page and user resource. You can find the action in the `App\Filament\Actions` directory.
@@ -45,7 +48,7 @@ A custom profile page that uses the generated password action. You can find the 
 ![login.png](resources/images/generate-password-action.jpg)
 
 ### Theme
-A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used. You can find the empty theme stylesheet in the `resources/css/filament/admin` directory.
+A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator. You can find the theme stylesheet in the `resources/css/filament/admin` directory.
 
 ## Packages
 
