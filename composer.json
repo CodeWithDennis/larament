@@ -2,7 +2,16 @@
     "name": "codewithdennis/larament",
     "type": "project",
     "description": "A starter template for building projects with Laravel and FilamentPHP.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework",
+        "filamentphp",
+        "filament",
+        "php",
+        "starter",
+        "template",
+        "boilerplate"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
