@@ -18,10 +18,17 @@ npm install && npm run build
 cp .env.example .env
 php artisan key:generate
 ```
+
 Since [Laravel 11](https://laravel.com/docs/11.x/releases#application-defaults) the default database is SQLite, if you want to use another database, update the `.env` file with your database preferences before running the migrations.
 
 ```bash
 php artisan migrate --seed
+```
+
+### Additional way to install Larament
+
+```bash
+composer create-project --prefer-dist CodeWithDennis/larament example-app
 ```
 
 ## Filament
