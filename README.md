@@ -87,6 +87,12 @@ Pest is a testing framework with a focus on simplicity, meticulously designed to
 - [pestphp/pest-plugin-laravel](https://pestphp.com/docs/plugins#laravel)
 - [pestphp/pest-plugin-livewire](https://pestphp.com/docs/plugins#livewire)
 
+### [phpstan/phpstan](https://phpstan.org/user-guide/getting-started)
+PHPStan scans your whole codebase and looks for both obvious & tricky bugs. Even in those rarely executed if statements that certainly aren't covered by tests.
+
+> This package is only installed in the development environment.
+
+
 ## Boilerplate
 The following files are part of the "branding" and can be removed.
 - resources/images/larament.png
