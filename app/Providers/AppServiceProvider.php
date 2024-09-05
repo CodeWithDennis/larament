@@ -3,13 +3,13 @@
 namespace App\Providers;
 
 use Filament\Forms\Components\Field;
+use Filament\Forms\Components\Placeholder;
+use Filament\Infolists\Components\Entry;
 use Filament\Support\Components\Component;
 use Filament\Support\Concerns\Configurable;
-use Illuminate\Support\ServiceProvider;
-use Filament\Tables\Filters\BaseFilter;
-use Filament\Forms\Components\Placeholder;
 use Filament\Tables\Columns\Column;
-use Filament\Infolists\Components\Entry;
+use Filament\Tables\Filters\BaseFilter;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
