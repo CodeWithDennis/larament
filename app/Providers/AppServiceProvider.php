@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
         foreach ([Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class] as $component) {
             /* @var Configurable $component */
             $component::configureUsing(function (Component $translatable): void {
+                /** @phpstan-ignore method.notFound */
                 $translatable->translateLabel();
             });
         }
