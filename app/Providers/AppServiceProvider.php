@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        foreach([Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class] as $component) {
+        foreach ([Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class] as $component) {
             /* @var Configurable $component */
             $component::configureUsing(function (Component $translatable): void {
                 $translatable->translateLabel();
