@@ -8,61 +8,19 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 > [!NOTE]
 > This starter kit includes **Laravel 11** and **FilamentPHP 3** with some packages that improve the development experience. This will not contain any bloated features or unnecessary packages. If you want to add more features, you can do so by installing the necessary packages. 
 
-## Installation
 
-**[Use this template](https://github.com/new?template_name=larament&template_owner=CodeWithDennis)** to create a new repository and clone it to your local machine, then navigate to the project directory to run the necessary commands.
+## Filament Configuration and Extra's
 
-```bash
-composer install
-npm install && npm run build
-cp .env.example .env
-php artisan key:generate
-```
-
-Since [Laravel 11](https://laravel.com/docs/11.x/releases#application-defaults) the default database is SQLite, if you want to use another database, update the `.env` file with your database preferences before running the migrations.
-
-```bash
-php artisan migrate --seed
-```
-
-### Additional way to install Larament
-
-```bash
-composer create-project --prefer-dist CodeWithDennis/larament example-app
-```
-
-## Filament
-
-### Panel Color
-The primary [color](https://filamentphp.com/docs/3.x/support/colors) for the Filament Panel is set to `Color::Blue`.
-
-### SPA
-[SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
-
-### Login
-A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find the custom login page in the [App\Filament\Pages\Auth](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Pages/Auth/Login.php) directory.
-
-### Global Search Keybinding
-
-The global search keybinding is set to `CTRL + K` or `CMD + K` for macOS by default.
-
-### UserResource PEST Tests
-A test file for the UserResource that tests all functionalities. You can find the test file in the [tests/Feature/Filament/Resources](https://github.com/CodeWithDennis/larament/blob/main/tests/Feature/Filament/Resources/UserResourceTest.php) directory.
-
-### User Global Search
-A global search for users that contains the email in the search results.
-
-### Generate Password
-A custom action for generating passwords on the user's profile page and user resource. You can find the action in the [App\Filament\Actions](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Actions/GeneratePasswordAction.php) directory.
-
-### Profile
-A custom profile page that uses the generated password action. You can find the profile page in the [App\Filament\Pages\App](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Pages/App/Profile.php) directory.
-
-### Theme
-A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator. You can find the theme stylesheet in the [resources/css/filament/admin](https://github.com/CodeWithDennis/larament/blob/main/resources/css/filament/admin/theme.css) directory.
-
-### Global Translatable Labels
-All component labels are automatically translatable this means that you do not need to add `->translateLabel()` to your components. If you want to disable this feature, you can remove the code from the `AppServiceProvider.php`.
+- The primary [color](https://filamentphp.com/docs/3.x/support/colors) for the Filament Panel is set to `Color::Blue`.
+- [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
+- A custom login page that automatically pre-fills the email and password with seeded data, allowing for easy local testing without the need to manually enter credentials.
+- The global search keybinding is set to `CTRL + K` or `CMD + K` for macOS by default.
+- A PEST case for the UserResource that tests all functionalities.
+- A global search for users that contains the email in the search results.
+- A [custom action](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Actions/GeneratePasswordAction.php) for generating passwords on the user's profile page and user resource.
+- A [custom profile page](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Pages/App/Profile.php) that uses the above mentioned generate password action.
+- A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator.
+- All component labels are automatically translatable which means that you do not need to add `->translateLabel()` to your components.
 
 ## Helpers
 You can also create your own helper functions for Laravel apps and PHP packages by having Composer automatically import them. Fortunately, this is already set up, and you can find the file in `app\Helpers.php`.
@@ -92,6 +50,29 @@ Pest is a testing framework with a focus on simplicity, meticulously designed to
 PHPStan scans your whole codebase and looks for both obvious & tricky bugs. Even in those rarely executed if statements that certainly aren't covered by tests.
 
 > This package is only installed in the development environment.
+
+## Installation
+
+**[Use this template](https://github.com/new?template_name=larament&template_owner=CodeWithDennis)** to create a new repository and clone it to your local machine, then navigate to the project directory to run the necessary commands.
+
+```bash
+composer install
+npm install && npm run build
+cp .env.example .env
+php artisan key:generate
+```
+
+Since [Laravel 11](https://laravel.com/docs/11.x/releases#application-defaults) the default database is SQLite, if you want to use another database, update the `.env` file with your database preferences before running the migrations.
+
+```bash
+php artisan migrate --seed
+```
+
+### Additional way to install Larament
+
+```bash
+composer create-project --prefer-dist CodeWithDennis/larament example-app
+```
 
 ## Screenshots
 ![user-global-search](resources/images/user-global-search.jpg)
