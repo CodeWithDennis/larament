@@ -95,7 +95,6 @@ PHPStan scans your whole codebase and looks for both obvious & tricky bugs. Even
 
 ## Screenshots
 ![user-global-search](resources/images/user-global-search.jpg)
-![generate-password-action](resources/images/generate-password-action.jpg)
 
 ## Boilerplate
 The following files are part of the "branding" and can be removed.
