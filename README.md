@@ -63,7 +63,7 @@ A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custo
 ### Global Translatable Labels
 All component labels are automatically translatable this means that you do not need to add `->translateLabel()` or `__()` to your components. If you want to disable this feature, you can remove the code from the `AppServiceProvider.php` if you want to disable this feature.
 
-### Helpers
+## Helpers
 You can also create your own helper functions for Laravel apps and PHP packages by having Composer automatically import them. Fortunately, this is already set up, and you can find the file in `app\Helpers.php`.
 
 ## Packages
