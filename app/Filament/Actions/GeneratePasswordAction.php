@@ -28,7 +28,7 @@ class GeneratePasswordAction extends Action
 
                 Notification::make()
                     ->success()
-                    ->title('Password successfully generated.')
+                    ->title(__('Password successfully generated.'))
                     ->send();
             });
     }
