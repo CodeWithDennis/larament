@@ -1,5 +1,5 @@
 {
-    "name": "codewithdennis/larament-boilerplate",
+    "name": "codewithdennis/larament",
     "type": "project",
     "description": "A starter template for building projects with Laravel and FilamentPHP.",
     "keywords": ["laravel", "framework"],
