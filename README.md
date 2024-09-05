@@ -61,19 +61,10 @@ A custom profile page that uses the generated password action. You can find the 
 A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator. You can find the theme stylesheet in the [resources/css/filament/admin](https://github.com/CodeWithDennis/larament/blob/main/resources/css/filament/admin/theme.css) directory.
 
 ### Global Translatable Labels
-All component labels are automatically translatable this means that you do not need to add `->translateLabel()` or `__()` to your components. If you want to disable this feature, you can remove the following code from the `AppServiceProvider.php`.
+All component labels are automatically translatable this means that you do not need to add `->translateLabel()` or `__()` to your components. If you want to disable this feature, you can remove the code from the `AppServiceProvider.php` if you want to disable this feature.
 
-```php
-public function boot(): void
-{
-    foreach ([Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class] as $component) {
-        /* @var Configurable $component */
-        $component::configureUsing(function (Component $translatable): void {
-            $translatable->translateLabel();
-        });
-    }
-}
-```
+### Helpers
+You can also create your own helper functions for Laravel apps and PHP packages by having Composer automatically import them. Fortunately, this is already set up, and you can find the file in `app\Helpers.php`.
 
 ## Packages
 
