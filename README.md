@@ -11,19 +11,19 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 
 ## Filament Configuration and Extra's
 
-- The primary [color](https://filamentphp.com/docs/3.x/support/colors) for the Filament Panel is set to `Color::Blue`.
-- [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
-- A custom login page that automatically pre-fills the email and password with seeded data, allowing for easy local testing without the need to manually enter credentials.
-- The global search keybinding is set to `CTRL + K` or `CMD + K` for macOS by default.
-- A PEST case for the UserResource that tests all functionalities.
-- A global search for users that contains the email in the search results.
-- A [custom action](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Actions/GeneratePasswordAction.php) for generating passwords on the user's profile page and user resource.
-- A [custom profile page](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Pages/App/Profile.php) that uses the above mentioned generate password action.
-- A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator.
-- All component labels are automatically translatable which means that you do not need to add `->translateLabel()` to your components.
+- The Filament Panel's primary color is set to blue.
+- Single Page Application (SPA) mode is enabled by default, providing faster and smoother user experiences.
+- A custom login page auto-fills email and password with seeded data, removing the need for manual typing in local testing.
+- Global search keybinding is preset to `CTRL + K` or `CMD + K` (for macOS) for quick access to search functionality.
+- A PEST test case for the `UserResource` ensures all functionalities are tested effectively.
+- The global user search includes email addresses in the search results for better user discovery.
+- A custom password generator action is available on the user profile and user resource pages.
+- A custom profile page utilizes the password generation feature for streamlined user management.
+- A ready-to-use custom theme includes a sidebar separator for better UI organization.
+- All component labels are automatically translatable, so there’s no need to add `->translateLabel()` to individual components.
 
 ## Helpers
-You can also create your own helper functions for Laravel apps and PHP packages by having Composer automatically import them. Fortunately, this is already set up, and you can find the file in `app\Helpers.php`.
+You can create your own helper functions for Laravel apps and PHP packages, and Composer will import them automatically. I've already set this up for you, and you can find the file at `app\Helpers.php`.
 
 ## Packages
 
@@ -68,7 +68,8 @@ Since [Laravel 11](https://laravel.com/docs/11.x/releases#application-defaults) 
 php artisan migrate --seed
 ```
 
-### Additional way to install Larament
+### Alternative Installation Method
+
 
 ```bash
 composer create-project --prefer-dist CodeWithDennis/larament example-app
