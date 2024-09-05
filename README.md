@@ -31,8 +31,6 @@ The primary color for the Filament Panel is set to `Color::Blue`.
 ### Login
 A custom login page that **automatically** fills in the email and password fields with seeded data, making it easy to test locally without entering credentials. You can find the custom login page in the [App\Filament\Pages\Auth](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Pages/Auth/Login.php) directory.
 
-![login](resources/images/login.png)
-
 ### Global Search Keybinding
 
 The global search keybinding is set to `CTRL + K` or `CMD + K` for macOS by default.
