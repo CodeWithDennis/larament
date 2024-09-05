@@ -27,7 +27,7 @@ php artisan migrate --seed
 ## Filament
 
 ### Panel Color
-The primary color for the Filament Panel is set to `Color::Blue`.
+The primary [color](https://filamentphp.com/docs/3.x/support/colors) for the Filament Panel is set to `Color::Blue`.
 
 ### SPA
 [SPA](https://filamentphp.com/docs/3.x/panels/configuration#spa-mode) (Single Page Application) is enabled by default.
