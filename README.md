@@ -78,15 +78,13 @@ public function boot(): void
 ## Packages
 
 ### [timokoerber/laravel-one-time-operations](https://github.com/TimoKoerber/laravel-one-time-operations)
-This package allows you to run one-time operations in your Laravel application. Instead of adding a new migration for a simple task, you can use this package to run the operation only once.
+This package allows you to run one-time operations in your Laravel application. Instead of adding a new migration for a simple task, you can use this package to run the operation only once. New one time operations will be added in the `database/operations` directory.
+
 
 ### [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 This package provides a developer toolbar for debugging Laravel applications. It includes a lot of helpful information like queries, routes, views, and more.
 
 > This package is only installed in the development environment.
-
-> [!NOTE]
-> Keep in mind that the debugbar views collector might slow down your application due to view rendering, but you can turn it off in the debugbar config file if you don't need it.
 
 ### [pestphp/pest](https://pestphp.com/docs/installation)
 Pest is a testing framework with a focus on simplicity, meticulously designed to bring back the joy of testing in PHP.
