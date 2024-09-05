@@ -18,7 +18,12 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 
-    public function boot(): void
+    /*
+     * If you would like add different configurations to the components you can separate them into different methods.
+     * This way you can keep the code clean and organized.
+     */
+
+    protected function translatableComponents(): void
     {
         foreach ([Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class] as $component) {
             /* @var Configurable $component */
@@ -27,5 +32,10 @@ class AppServiceProvider extends ServiceProvider
                 $translatable->translateLabel();
             });
         }
+    }
+
+    public function boot(): void
+    {
+        $this->translatableComponents();
     }
 }
