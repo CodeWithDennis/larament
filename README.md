@@ -79,6 +79,15 @@ php artisan migrate --seed
 composer create-project --prefer-dist CodeWithDennis/larament example-app
 ```
 
+If you don't want to remember the composer installation syntax for future projects, you can create an alias for your terminal:
+
+```bash
+alias larament="composer create-project --prefer-dist CodeWithDennis/larament"
+```
+
+This allows you to simply use `larament project-example` in your terminal.
+
+
 ## Screenshots
 ![user-global-search](resources/images/user-global-search.jpg)
 
