@@ -9,6 +9,14 @@ use Filament\Pages\Auth\EditProfile;
 
 class Profile extends EditProfile
 {
+    public function getBreadcrumbs(): array
+    {
+        return [
+            null => __('Dashboard'),
+            'profile' => __('Profile'),
+        ];
+    }
+
     public function form(Form $form): Form
     {
         return $form->schema([
