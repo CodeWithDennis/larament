@@ -42,8 +42,6 @@ The global search keybinding is set to `CTRL + K` or `CMD + K` for macOS by defa
 ### UserResource PEST Tests
 A test file for the UserResource that tests all functionalities. You can find the test file in the [tests/Feature/Filament/Resources](https://github.com/CodeWithDennis/larament/blob/main/tests/Feature/Filament/Resources/UserResourceTest.php) directory.
 
-![user-resource-pest-tests](resources/images/user-resource-pest.png)
-
 ### User Global Search
 A global search for users that contains the email in the search results.
 
