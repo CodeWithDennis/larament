@@ -30,8 +30,8 @@ class Profile extends EditProfile
                     $this->getNameFormComponent(),
                     $this->getEmailFormComponent(),
                     $passwordComponent->suffixActions([
-                            GeneratePasswordAction::make(),
-                        ]),
+                        GeneratePasswordAction::make(),
+                    ]),
                     $this->getPasswordConfirmationFormComponent(),
                 ]),
         ]);
