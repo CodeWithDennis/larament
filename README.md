@@ -46,23 +46,17 @@ A custom login page that **automatically** fills in the email and password field
 
 The global search keybinding is set to `CTRL + K` or `CMD + K` for macOS by default.
 
-![global-search-keybinding](resources/images/global-search-keybinding.jpg)
-
 ### UserResource PEST Tests
 A test file for the UserResource that tests all functionalities. You can find the test file in the [tests/Feature/Filament/Resources](https://github.com/CodeWithDennis/larament/blob/main/tests/Feature/Filament/Resources/UserResourceTest.php) directory.
 
 ### User Global Search
 A global search for users that contains the email in the search results.
 
-![user-global-search](resources/images/user-global-search.jpg)
-
 ### Generate Password
 A custom action for generating passwords on the user's profile page and user resource. You can find the action in the [App\Filament\Actions](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Actions/GeneratePasswordAction.php) directory.
 
 ### Profile
 A custom profile page that uses the generated password action. You can find the profile page in the [App\Filament\Pages\App](https://github.com/CodeWithDennis/larament/blob/main/app/Filament/Pages/App/Profile.php) directory.
-
-![generate-password](resources/images/generate-password-action.jpg)
 
 ### Theme
 A [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that is ready to be used which includes a sidebar separator. You can find the theme stylesheet in the [resources/css/filament/admin](https://github.com/CodeWithDennis/larament/blob/main/resources/css/filament/admin/theme.css) directory.
@@ -99,9 +93,11 @@ PHPStan scans your whole codebase and looks for both obvious & tricky bugs. Even
 
 > This package is only installed in the development environment.
 
+## Screenshots
+![user-global-search](resources/images/user-global-search.jpg)
+![generate-password-action](resources/images/generate-password-action.jpg)
 
 ## Boilerplate
 The following files are part of the "branding" and can be removed.
 - resources/images/larament.png
 - resources/images/user-global-search.jpg
-- resources/images/generate-password-action.jpg
