@@ -87,6 +87,14 @@ alias larament="composer create-project --prefer-dist CodeWithDennis/larament"
 
 This allows you to simply use `larament project-example` in your terminal.
 
+```bash
+larament project-example
+cd project-example/
+npm install && npm run build
+php artisan db:seed
+php artisan serve
+```
+
 
 ## Screenshots
 ![user-global-search](resources/images/user-global-search.jpg)
