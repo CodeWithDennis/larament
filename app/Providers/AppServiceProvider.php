@@ -9,6 +9,7 @@ use Filament\Support\Components\Component;
 use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Filters\BaseFilter;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -36,6 +37,8 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        Model::shouldBeStrict();
+
         $this->translatableComponents();
     }
 }
