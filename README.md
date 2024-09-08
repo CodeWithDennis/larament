@@ -26,8 +26,8 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - A ready-to-use custom theme includes a sidebar separator for better UI organization.
 - All component labels are automatically translatable, so there’s no need to add `->translateLabel()` to individual components.
 
-## Helpers
-You can create your own helper functions for Laravel apps and PHP packages, and Composer will import them automatically. I've already set this up for you, and you can find the file at `app\Helpers.php`.
+## [Helpers](https://laravel-news.com/creating-helpers)
+I've set up a Helper file for you to use in your Laravel app. You can find it at `app\Helpers.php`. This file is ready for you to add your custom helper functions, which Composer will automatically include in your project.
 
 ## [Should Be Strict](https://laravel-news.com/shouldbestrict)
 This boilerplate has `shouldBeStrict` in the boot method of the `AppServiceProvider`. This setting will stop lazy loading, silently discarding attributes, and prevent accessing missing attributes. This will help you catch errors early and improve the quality of your code.
