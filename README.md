@@ -30,7 +30,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 You can create your own helper functions for Laravel apps and PHP packages, and Composer will import them automatically. I've already set this up for you, and you can find the file at `app\Helpers.php`.
 
 ## [Should Be Strict](https://laravel-news.com/shouldbestrict)
-This boilerplate has `Model::shouldBeStrict` in the boot method of the `AppServiceProvider`. This setting will stop lazy loading, silently discarding attributes, and prevent accessing missing attributes. This will help you catch errors early and improve the quality of your code.
+This boilerplate has `shouldBeStrict` in the boot method of the `AppServiceProvider`. This setting will stop lazy loading, silently discarding attributes, and prevent accessing missing attributes. This will help you catch errors early and improve the quality of your code.
 
 ## Packages
 
