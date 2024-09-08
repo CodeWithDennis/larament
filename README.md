@@ -4,7 +4,7 @@
 [![PEST](https://github.com/codewithdennis/larament/actions/workflows/pest.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 
-![larament.png](resources/images/larament.png)
+![larament.png](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/larament.png)
 
 
 Kickstart your project and save time with Larament! This time-saving starter kit includes a Laravel project with FilamentPHP already installed and set up, along with extra features.
@@ -97,7 +97,7 @@ php artisan serve
 
 
 ## Screenshots
-![user-global-search](resources/images/user-global-search.jpg)
+![user-global-search](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/user-global-search.jpg)
 
 ## Boilerplate
 The following files are part of the "branding" and can be removed.
