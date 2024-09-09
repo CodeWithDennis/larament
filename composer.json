@@ -28,10 +28,10 @@
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
-        "pestphp/pest": "^3",
-        "pestphp/pest-plugin-faker": "^3",
-        "pestphp/pest-plugin-laravel": "^3",
-        "pestphp/pest-plugin-livewire": "^3"
+        "pestphp/pest": "^3.0.0",
+        "pestphp/pest-plugin-faker": "^3.0.0",
+        "pestphp/pest-plugin-laravel": "^3.0.0",
+        "pestphp/pest-plugin-livewire": "^3.0.0"
     },
     "autoload": {
         "psr-4": {
