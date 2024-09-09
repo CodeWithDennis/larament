@@ -8,6 +8,7 @@
 if (! function_exists('example')) {
     function example(): string
     {
+        // testing...
         return 'This is an example function you can use in your project.';
     }
 }
