@@ -25,6 +25,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - A custom profile page utilizes the password generation feature for streamlined user management.
 - A ready-to-use custom theme includes a sidebar separator for better UI organization.
 - All component labels are automatically translatable, so there’s no need to add `->translateLabel()` to individual components.
+- Archtest is included for architectural testing.
 
 ## [Helpers](https://laravel-news.com/creating-helpers)
 I've set up a Helper file for you to use in your Laravel app. You can find it at `app\Helpers.php`. This file is ready for you to add your custom helper functions, which Composer will automatically include in your project.
