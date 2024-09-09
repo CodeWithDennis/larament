@@ -41,12 +41,11 @@ This package allows you to run one-time operations in your Laravel application. 
 ### [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 This package provides a developer toolbar for debugging Laravel applications. It includes a lot of helpful information like queries, routes, views, and more.
 
-> This package is only installed in the development environment.
-
 ### [pestphp/pest](https://pestphp.com/docs/installation)
-Pest is a testing framework with a focus on simplicity, meticulously designed to bring back the joy of testing in PHP.
+PESTPHP is a testing framework with a focus on simplicity, meticulously designed to bring back the joy of testing in PHP.
 
-> This package is only installed in the development environment.
+> [!NOTE]
+> The new version 3 is now available and is the default testing framework in this boilerplate!
 
 #### Additional Plugins
 - [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#faker) 
@@ -55,8 +54,6 @@ Pest is a testing framework with a focus on simplicity, meticulously designed to
 
 ### [phpstan/phpstan](https://phpstan.org/user-guide/getting-started)
 PHPStan scans your whole codebase and looks for both obvious & tricky bugs. Even in those rarely executed if statements that certainly aren't covered by tests.
-
-> This package is only installed in the development environment.
 
 ## Installation
 
