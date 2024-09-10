@@ -31,12 +31,14 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 I've set up a Helper file for you to use in your Laravel app. You can find it at `app\Helpers.php`. This file is ready for you to add your custom helper functions, which Composer will automatically include in your project.
 
 ## [Should Be Strict](https://laravel-news.com/shouldbestrict)
-This boilerplate has `shouldBeStrict` in the boot method of the `AppServiceProvider`. This setting will stop lazy loading, silently discarding attributes, and prevent accessing missing attributes. This will help you catch errors early and improve the quality of your code.
+This boilerplate has `shouldBeStrict` in the boot method of the `AppServiceProvider`. This setting will stop lazy loading (prevents N+1 query issues), silently discarding attributes, and prevent accessing missing attributes. This will help you catch errors early and improve the quality of your code.
 
 ## Packages
 
 ### [timokoerber/laravel-one-time-operations](https://github.com/TimoKoerber/laravel-one-time-operations)
-This package allows you to run one-time operations in your Laravel application. Instead of adding a new migration for a simple task, you can use this package to run the operation only once. New one time operations will be added in the `database/operations` directory.
+This package lets you run one-time tasks in your Laravel application. Instead of creating a new migration for a small job, you can use this package to run the task just once. Any new one-time operations will be placed in the `database/operations` folder.
+
+Also, adding this to your deployment can be really helpful because you won't need to manually run seeders if you want to modify data in your production environment.
 
 
 ### [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
