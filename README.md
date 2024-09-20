@@ -17,7 +17,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 
 - The Filament Panel's primary color is set to blue.
 - Single Page Application (SPA) mode is enabled by default, providing faster and smoother user experiences.
-- A custom login page auto-fills email and password with seeded data, removing the need for manual typing in local testing.
+- A custom login page autofills email and password with seeded data, removing the need for manual typing in local testing.
 - Global search keybinding is preset to `CTRL + K` or `CMD + K` (for macOS) for quick access to search functionality.
 - A PEST test case for the `UserResource` ensures all functionalities are tested effectively.
 - The global user search includes email addresses in the search results for better user discovery.
@@ -26,6 +26,14 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - A ready-to-use custom theme includes a sidebar separator for better UI organization.
 - All component labels are automatically translatable, so there’s no need to add `->translateLabel()` to individual components.
 - Archtest is included for architectural testing.
+
+## Default User (Local)
+By default, the first user will be created based on the credentials setup in the `.env` file. If you want to change the default user after running the seeders, you can update the `DEFAULT_USER_EMAIL` and `DEFAULT_USER_PASSWORD` in the `.env` file and run the seeders again.
+
+```dotenv
+DEFAULT_USER_EMAIL="admin@example.com"
+DEFAULT_USER_PASSWORD="password"
+```
 
 ## [Helpers](https://laravel-news.com/creating-helpers)
 I've set up a Helper file for you to use in your Laravel app. You can find it at `app\Helpers.php`. This file is ready for you to add your custom helper functions, which Composer will automatically include in your project.
