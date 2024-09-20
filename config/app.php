@@ -123,4 +123,13 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+     * Default user credentials for local development environment
+     * This will be used as the default user credentials when seeding the database
+     */
+
+    'default_user' => [
+        'email' => env('DEFAULT_USER_EMAIL'),
+        'password' => env('DEFAULT_USER_PASSWORD'),
+    ],
 ];
