@@ -36,8 +36,7 @@ DEFAULT_USER_PASSWORD="password"
 ```
 
 ## Composer Review
-A composer script `composer review` is available to run the following commands to ensure the codebase is clean and ready for deployment. Of course, you can run these commands individually as well.
-
+A composer script `composer review` is available to run the following commands to ensure the codebase is clean and ready for deployment:
 ```bash
 ./vendor/bin/pest --parallel
 ./vendor/bin/pint
