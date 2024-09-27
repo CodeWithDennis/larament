@@ -35,6 +35,20 @@ DEFAULT_USER_EMAIL="admin@example.com"
 DEFAULT_USER_PASSWORD="password"
 ```
 
+## Composer Review
+A composer script `composer review` is available to run the following commands to ensure the codebase is clean and ready for deployment.
+
+```bash
+composer review
+```
+
+The script will run the following commands:
+
+```bash
+./vendor/bin/pest --parallel
+./vendor/bin/pint
+./vendor/bin/phpstan analyse
+```
 ## [Helpers](https://laravel-news.com/creating-helpers)
 I've set up a Helper file for you to use in your Laravel app. You can find it at `app\Helpers.php`. This file is ready for you to add your custom helper functions, which Composer will automatically include in your project.
 
