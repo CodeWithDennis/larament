@@ -24,6 +24,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - A custom password generator action is available on the user profile and user resource pages.
 - A custom profile page utilizes the password generation feature for streamlined user management.
 - A ready-to-use custom theme includes a sidebar separator for better UI organization.
+- Password reset functionality is available on the login page for easy password recovery.
 - All component labels are automatically translatable, so there’s no need to add `->translateLabel()` to individual components.
 - Archtest is included for architectural testing.
 
