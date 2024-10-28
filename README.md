@@ -68,10 +68,7 @@ Also, adding this to your deployment can be really helpful because you won't nee
 This package provides a developer toolbar for debugging Laravel applications. It includes a lot of helpful information like queries, routes, views, and more.
 
 ### [pestphp/pest](https://pestphp.com/docs/installation)
-PESTPHP is a testing framework with a focus on simplicity, meticulously designed to bring back the joy of testing in PHP.
-
-> [!NOTE]
-> The new version 3 is now available and is the default testing framework in this boilerplate!
+PESTPHP 3 is a testing framework with a focus on simplicity, meticulously designed to bring back the joy of testing in PHP.
 
 #### Additional Plugins
 - [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#faker) 
