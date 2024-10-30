@@ -17,6 +17,8 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 
 ### Security and Testing
 - A handfull of [PESTPHP](https://pestphp.com/docs/installation) test cases are included for testing.
+
+![pest-php](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/pest-php.png)
 - [Should be strict](https://laravel-news.com/shouldbestrict)
   - Prevents lazy loading (N+1) queries.
   - It prevents silently discarding attributes.
@@ -27,6 +29,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - Laravel debugbar is included for debugging.
 
 ### Quality of Life
+![generate-password-action](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/generate-password-action.jpg)
 - A custom login page autofills email and password with seeded data, streamlining local testing.
 - A custom password generator action is available on the user profile and user resource pages.
 - Global user search includes email addresses in results for better user discovery.
@@ -35,6 +38,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - Helper file is included for custom helper functions.
 
 ### Design
+![user-global-search](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/user-global-search.jpg)
 - The Filament Panel's primary color is set to blue.
 - Single Page Application (SPA) mode is enabled by default.
 - Global search keybinding is preset to `CTRL + K` or `CMD + K`.
