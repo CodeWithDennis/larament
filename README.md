@@ -16,9 +16,8 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 ## Configuration
 
 ### Security and Testing
-- A handfull of [PESTPHP](https://pestphp.com/docs/installation) test cases are included for testing.
-
 ![pest-php](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/pest-php.png)
+- A handfull of [PESTPHP](https://pestphp.com/docs/installation) test cases are included for testing.
 - [Should be strict](https://laravel-news.com/shouldbestrict)
   - Prevents lazy loading (N+1) queries.
   - It prevents silently discarding attributes.
