@@ -41,7 +41,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - The Filament Panel's primary color is set to blue.
 - Single Page Application (SPA) mode is enabled by default.
 - Global search keybinding is preset to `CTRL + K` or `CMD + K`.
-- A ready-to-use FilamentPHP [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that alos includes a sidebar separator.
+- A ready-to-use FilamentPHP [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that also includes a sidebar separator.
 - A custom profile that includes the password generator action.
 
 ## Default User
