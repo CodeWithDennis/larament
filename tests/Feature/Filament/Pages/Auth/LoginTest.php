@@ -38,9 +38,8 @@ test('an authenticated user can access the admin panel', function () {
 });
 
 test('an authenticated user can logout', function () {
-    $this->get('admin')
-        ->assertOk();
+    $this->assertAuthenticated();
 
-    $this->post('admin/logout')
+    $this->post(Filament::getLogoutUrl())
         ->assertRedirect(Filament::getLoginUrl());
 });
