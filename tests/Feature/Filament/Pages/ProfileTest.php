@@ -23,7 +23,10 @@ it('can update profile', function () {
         ->call('save')
         ->assertHasNoFormErrors();
 
-    $this->assertDatabaseHas(User::class, $updatedUser->toArray());
+    $this->assertDatabaseHas(User::class, [
+        'name' => $updatedUser->name,
+        'email' => $updatedUser->email,
+    ]);
 });
 
 it('can update password and authenticate', function () {
