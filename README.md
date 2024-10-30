@@ -17,7 +17,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 
 ### Security and Testing
 - A handfull of [PESTPHP](https://pestphp.com/docs/installation) test cases are included for testing.
-- [ShouldBeStrict](https://laravel-news.com/shouldbestrict) is enabled on non-production environments.
+- [Should be strict](https://laravel-news.com/shouldbestrict) is enabled on non-production environments.
 - [Prohibit destructive commands](https://laravel-news.com/prevent-destructive-commands-from-running-in-laravel-11) in production environments.
 - Archtest is included for architectural testing.
 - PHPStan is included for static analysis.
