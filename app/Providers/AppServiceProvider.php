@@ -10,6 +10,7 @@ use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -18,11 +19,6 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
-
-    /*
-     * If you would like add different configurations to the components you can separate them into different methods.
-     * This way you can keep the code clean and organized.
-     */
 
     protected function translatableComponents(): void
     {
@@ -35,10 +31,16 @@ class AppServiceProvider extends ServiceProvider
         }
     }
 
+    private function configureCommands(): void
+    {
+        DB::prohibitDestructiveCommands($this->app->isProduction());
+
+        Model::shouldBeStrict(! app()->isProduction());
+    }
+
     public function boot(): void
     {
-        Model::shouldBeStrict(! app()->isProduction());
-
+        $this->configureCommands();
         $this->translatableComponents();
     }
 }
