@@ -12,8 +12,8 @@ abstract class TestCase extends BaseTestCase
         parent::setUp();
 
         $this->actingAs(User::factory()->create([
-            'name' => 'John Doe',
-            'email' => 'john@example.com',
+            'email' => config('app.default_user.email'),
+            'password' => config('app.default_user.password'),
         ]));
 
         $this->withoutVite();
