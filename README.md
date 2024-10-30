@@ -6,7 +6,7 @@
 [![Total Installs](https://img.shields.io/packagist/dt/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 
-![larament.png](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/larament.png)
+![larament](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/larament.png)
 
 Kickstart your project and save time with Larament! This time-saving starter kit includes a Laravel project with FilamentPHP already installed and set up, along with extra features.
 
@@ -29,6 +29,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - Laravel debugbar is included for debugging.
 
 ### Quality of Life
+![global-search-keybinding](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/global-search-keybinding.jpg)
 - A custom login page autofills email and password with seeded data, streamlining local testing.
 - A custom password generator action is available on the user profile and user resource pages.
 - Global user search includes email addresses in results for better user discovery.
@@ -45,7 +46,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - A custom profile that includes the password generator action.
 
 ## Default User
-The default user is seeded with the following credentials:
+The default user is seeded with the following credentials which is autofilled on the login page.
 
 ```dotenv
 DEFAULT_USER_EMAIL="admin@example.com"
