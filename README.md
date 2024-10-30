@@ -27,14 +27,14 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - A custom login page autofills email and password with seeded data, streamlining local testing.
 - A custom password generator action is available on the user profile and user resource pages.
 - Global user search includes email addresses in results for better user discovery.
-- All component labels are automatically translatable, eliminating the need for `->translateLabel()` in individual components.
+- All component labels are automatically translatable.
 - The `composer review` command runs a series of tests to ensure the codebase is clean and ready for deployment.
 - Helper file is included for custom helper functions.
 
 ### Design
 - The Filament Panel's primary color is set to blue.
-- Single Page Application (SPA) mode is enabled by default for a faster, smoother user experience.
-- Global search keybinding is preset to `CTRL + K` or `CMD + K` (for macOS) for quick access to search functionality.
+- Single Page Application (SPA) mode is enabled by default.
+- Global search keybinding is preset to `CTRL + K` or `CMD + K`.
 - A ready-to-use FilamentPHP [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that alos includes a sidebar separator.
 - A custom profile that includes a password generator.
 
