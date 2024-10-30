@@ -12,10 +12,7 @@ it('can render the profile page', function () {
 });
 
 it('can update profile', function () {
-    $updatedUser = User::factory()->make([
-        'name' => 'Jane Doe',
-        'email' => 'jane@example.com',
-    ]);
+    $updatedUser = User::factory()->make();
 
     livewire(Profile::class)
         ->fillForm([
@@ -26,7 +23,7 @@ it('can update profile', function () {
         ->call('save')
         ->assertHasNoFormErrors();
 
-    $this->assertDatabaseHas(User::class, auth()->user()->toArray());
+    $this->assertDatabaseHas(User::class, $updatedUser->toArray());
 });
 
 it('can update password and authenticate', function () {
