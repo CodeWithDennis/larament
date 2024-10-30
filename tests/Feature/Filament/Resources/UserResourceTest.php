@@ -12,7 +12,7 @@ use Illuminate\Support\Str;
 use function Pest\Livewire\livewire;
 
 beforeEach(function () {
-    /* The TestCase generates a user before each test, so we need to clear the table to make sure we have a clean slate. */
+    /* The TestCase setup generates a user before each test, so we need to clear the table to make sure we have a clean slate. */
     DB::table('users')->truncate();
 });
 
