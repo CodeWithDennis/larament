@@ -20,7 +20,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - Single Page Application (SPA) mode is enabled by default, providing faster and smoother user experiences.
 - A custom login page autofills email and password with seeded data, removing the need for manual typing in local testing.
 - Global search keybinding is preset to `CTRL + K` or `CMD + K` (for macOS) for quick access to search functionality.
-- A PEST test case for the `UserResource` ensures all functionalities are tested effectively.
+- PEST test cases for the `UserResource`, `Login`, and `Profile` pages.
 - The global user search includes email addresses in the search results for better user discovery.
 - A custom password generator action is available on the user profile and user resource pages.
 - A custom profile page utilizes the password generation feature for streamlined user management.
