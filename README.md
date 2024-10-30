@@ -17,8 +17,8 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 
 ### Security and Testing
 - A handfull of [PESTPHP](https://pestphp.com/docs/installation) test cases are included for testing.
-- [Should be strict](https://laravel-news.com/shouldbestrict) is enabled on non-production environments.
-- [Prohibit destructive commands](https://laravel-news.com/prevent-destructive-commands-from-running-in-laravel-11) in production environments.
+- [ShouldBeStrict](https://laravel-news.com/shouldbestrict) is enabled on non-production environments.
+- [ProhibitDestructiveCommands](https://laravel-news.com/prevent-destructive-commands-from-running-in-laravel-11) in production environments.
 - Archtest is included for architectural testing.
 - PHPStan is included for static analysis.
 - Laravel debugbar is included for debugging.
@@ -36,7 +36,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - Single Page Application (SPA) mode is enabled by default.
 - Global search keybinding is preset to `CTRL + K` or `CMD + K`.
 - A ready-to-use FilamentPHP [custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) that alos includes a sidebar separator.
-- A custom profile that includes a password generator.
+- A custom profile that includes the password generator action.
 
 ## Default User
 The default user is seeded with the following credentials:
@@ -65,12 +65,6 @@ composer install
 npm install && npm run build
 cp .env.example .env
 php artisan key:generate
-```
-
-Since [Laravel 11](https://laravel.com/docs/11.x/releases#application-defaults) the default database is SQLite, if you want to use another database, update the `.env` file with your database preferences before running the migrations.
-
-```bash
-php artisan migrate --seed
 ```
 
 ###  CLI Installation
