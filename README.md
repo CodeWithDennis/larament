@@ -2,10 +2,10 @@
 
 [![Pint](https://github.com/codewithdennis/larament/actions/workflows/pint.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
 [![PEST](https://github.com/codewithdennis/larament/actions/workflows/pest.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
+[![PHPStan](https://github.com/CodeWithDennis/larament/actions/workflows/phpstan.yml/badge.svg)](https://github.com/CodeWithDennis/larament/actions/workflows/phpstan.yml)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 
 ![larament.png](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/larament.png)
-
 
 Kickstart your project and save time with Larament! This time-saving starter kit includes a Laravel project with FilamentPHP already installed and set up, along with extra features.
 
@@ -95,8 +95,9 @@ Since [Laravel 11](https://laravel.com/docs/11.x/releases#application-defaults) 
 php artisan migrate --seed
 ```
 
-### Alternative Installation Method
+###  CLI Installation
 
+You can also use the following command to create a new project with Larament.
 
 ```bash
 composer create-project --prefer-dist CodeWithDennis/larament example-app
@@ -105,19 +106,14 @@ composer create-project --prefer-dist CodeWithDennis/larament example-app
 If you don't want to remember the composer installation syntax for future projects, you can create an alias for your terminal:
 
 ```bash
-alias larament="composer create-project --prefer-dist CodeWithDennis/larament"
+alias larament="composer create-project --prefer-dist CodeWithDennis/larament my-cool-app"
 ```
 
-This allows you to simply use `larament project-example` in your terminal.
+This allows you to simply use `larament my-cool-app` in your terminal.
 
 ```bash
-larament project-example
-cd project-example/
-npm install && npm run build
-php artisan db:seed
-php artisan serve
+larament my-cool-app
 ```
-
 
 ## Screenshots
 ![user-global-search](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/user-global-search.jpg)
