@@ -29,7 +29,6 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - Laravel debugbar is included for debugging.
 
 ### Quality of Life
-![generate-password-action](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/generate-password-action.jpg)
 - A custom login page autofills email and password with seeded data, streamlining local testing.
 - A custom password generator action is available on the user profile and user resource pages.
 - Global user search includes email addresses in results for better user discovery.
@@ -93,6 +92,3 @@ This allows you to simply use `larament my-cool-app` in your terminal.
 ```bash
 larament my-cool-app
 ```
-
-## Screenshots
-![user-global-search](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/user-global-search.jpg)
