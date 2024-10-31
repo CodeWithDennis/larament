@@ -34,13 +34,17 @@ class AppServiceProvider extends ServiceProvider
     private function configureCommands(): void
     {
         DB::prohibitDestructiveCommands($this->app->isProduction());
+    }
 
+    private function configureModels(): void
+    {
         Model::shouldBeStrict(! app()->isProduction());
     }
 
     public function boot(): void
     {
         $this->configureCommands();
+        $this->configureModels();
         $this->translatableComponents();
     }
 }
