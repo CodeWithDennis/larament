@@ -1,0 +1,23 @@
+<?php
+
+namespace {{ namespace }};
+
+use Filament\Forms\Components\Actions\Action;
+use Filament\Forms\Set;
+use Filament\Notifications\Notification;
+use Illuminate\Support\Str;
+
+class {{ className }} extends Action
+{
+    public static function getDefaultName(): ?string
+    {
+        return '{{ defaultName }}';
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // TODO: Add your setup logic here
+    }
+}
