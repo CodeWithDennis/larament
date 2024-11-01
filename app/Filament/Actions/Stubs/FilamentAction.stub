@@ -3,9 +3,6 @@
 namespace {{ namespace }};
 
 use Filament\Forms\Components\Actions\Action;
-use Filament\Forms\Set;
-use Filament\Notifications\Notification;
-use Illuminate\Support\Str;
 
 class {{ className }} extends Action
 {
