@@ -47,6 +47,7 @@ class MakeFilamentActionCommand extends Command
         $className = $this->getClassName($name);
         $type = $this->getActionType();
         $actionClass = $this->actionTypes[$type];
+        $baseClass = $type === 'table-bulk' ? 'BulkAction' : 'Action';  // Determine base class
         $path = $this->getFilePath($className, $type);
 
         if ($this->fileExists($path)) {
@@ -56,7 +57,7 @@ class MakeFilamentActionCommand extends Command
         }
 
         $stubContent = $this->getStubContent();
-        $this->generateActionFile($path, $className, $actionClass, $stubContent);
+        $this->generateActionFile($path, $className, $actionClass, $stubContent, $baseClass);
 
         info("$className created successfully at:");
         info($path);
@@ -72,7 +73,7 @@ class MakeFilamentActionCommand extends Command
 
     private function getClassName(string $name): string
     {
-        return Str::endsWith($name, 'Action') ? Str::studly($name) : Str::studly($name) . 'Action';
+        return Str::endsWith($name, 'Action') ? Str::studly($name) : Str::studly($name).'Action';
     }
 
     private function getActionType(): string
@@ -142,14 +143,14 @@ class MakeFilamentActionCommand extends Command
         return File::get($stubPath);
     }
 
-    private function generateActionFile(string $path, string $className, string $actionClass, string $stubContent): void
+    private function generateActionFile(string $path, string $className, string $actionClass, string $stubContent, string $baseClass): void
     {
         $namespace = $this->getNamespace($path);
         $defaultName = Str::camel(Str::replaceLast('Action', '', $className));
 
         $content = str_replace(
-            ['{{ namespace }}', '{{ className }}', '{{ defaultName }}', '{{ actionClass }}'],
-            [$namespace, $className, $defaultName, $actionClass],
+            ['{{ namespace }}', '{{ className }}', '{{ defaultName }}', '{{ actionClass }}', '{{ baseClass }}'],
+            [$namespace, $className, $defaultName, $actionClass, $baseClass],
             $stubContent
         );
 

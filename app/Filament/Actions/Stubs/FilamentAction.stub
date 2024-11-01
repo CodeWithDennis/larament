@@ -4,7 +4,7 @@ namespace {{ namespace }};
 
 use {{ actionClass }};
 
-class {{ className }} extends Action
+class {{ className }} extends {{ baseClass }}
 {
     public static function getDefaultName(): ?string
     {
