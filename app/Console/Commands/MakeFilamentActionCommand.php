@@ -8,27 +8,35 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 use function Laravel\Prompts\info;
-use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
 use function Laravel\Prompts\warning;
 
 class MakeFilamentActionCommand extends Command
 {
-    protected $signature = 'make:filament-action {name?}';
+    protected $signature = 'make:filament-action {name?}
+                            {--form : Generate a form component action}
+                            {--table : Generate a table component action}
+                            {--table-bulk : Generate a table bulk action}
+                            {--custom-component : Generate a custom component action}
+                            {--infolist : Generate an infolist component action}
+                            {--notification : Generate a notification action}
+                            {--global-search : Generate a global search result action}';
 
     protected $description = 'Create a new Filament action class';
 
     /**
-     * @var array|string[]
+     * Mapping of type flags to their corresponding action class.
+     *
+     * @var array<string, string>
      */
     protected array $actionTypes = [
         'form' => 'Filament\\Forms\\Components\\Actions\\Action',
         'table' => 'Filament\\Tables\\Actions\\Action',
-        'table_bulk' => 'Filament\\Tables\\Actions\\BulkAction',
-        'custom_component' => 'Filament\\Actions\\Action',
+        'table-bulk' => 'Filament\\Tables\\Actions\\BulkAction',
+        'custom-component' => 'Filament\\Actions\\Action',
         'infolist' => 'Filament\\Infolists\\Components\\Actions\\Action',
         'notification' => 'Filament\\Notifications\\Actions\\Action',
-        'global_search' => 'Filament\\GlobalSearch\\Actions\\Action',
+        'global-search' => 'Filament\\GlobalSearch\\Actions\\Action',
     ];
 
     /**
@@ -38,7 +46,9 @@ class MakeFilamentActionCommand extends Command
     {
         $name = $this->getNameArgument();
         $className = $this->getClassName($name);
-        $path = $this->getFilePath($className);
+        $type = $this->getActionType();
+        $actionClass = $this->actionTypes[$type];
+        $path = $this->getFilePath($className, $type);
 
         if ($this->fileExists($path)) {
             warning("$className already exists.");
@@ -46,7 +56,6 @@ class MakeFilamentActionCommand extends Command
             return;
         }
 
-        $actionClass = $this->getActionClass();
         $stubContent = $this->getStubContent();
         $this->generateActionFile($path, $className, $actionClass, $stubContent);
 
@@ -69,32 +78,49 @@ class MakeFilamentActionCommand extends Command
         return Str::studly($name).'Action';
     }
 
-    private function getFilePath(string $className): string
+    private function getActionType(): string
     {
-        return app_path("Filament/Actions/$className.php");
+        $selectedTypes = array_filter([
+            'form' => $this->option('form'),
+            'table' => $this->option('table'),
+            'table-bulk' => $this->option('table-bulk'),
+            'custom-component' => $this->option('custom-component'),
+            'infolist' => $this->option('infolist'),
+            'notification' => $this->option('notification'),
+            'global-search' => $this->option('global-search'),
+        ]);
+
+        if (count($selectedTypes) > 1) {
+            warning('Please specify only one action type.');
+            exit;
+        }
+
+        if (count($selectedTypes) === 0) {
+            warning('No action type specified. Please provide one.');
+            exit;
+        }
+
+        return key($selectedTypes);
+    }
+
+    private function getFilePath(string $className, string $type): string
+    {
+        $subDirectory = match ($type) {
+            'form' => 'Forms',
+            'table', 'table-bulk' => 'Tables',
+            'infolist' => 'Infolists',
+            'notification' => 'Notifications',
+            'global-search' => 'GlobalSearch',
+            'custom-component' => 'Custom',
+            default => '',
+        };
+
+        return app_path("Filament/Actions/$subDirectory/$className.php");
     }
 
     private function fileExists(string $path): bool
     {
         return File::exists($path);
-    }
-
-    private function getActionClass(): string
-    {
-        $selectedType = select(
-            label: 'What type of action is this for?',
-            options: [
-                'form' => 'Form component action',
-                'table' => 'Table component action',
-                'table_bulk' => 'Table bulk action',
-                'infolist' => 'Infolist component action',
-                'notification' => 'Notification action',
-                'global_search' => 'Global search result action',
-                'custom_component' => 'Custom Component',
-            ]
-        );
-
-        return $this->actionTypes[$selectedType];
     }
 
     /**
@@ -109,7 +135,7 @@ class MakeFilamentActionCommand extends Command
 
     private function generateActionFile(string $path, string $className, string $actionClass, string $stubContent): void
     {
-        $namespace = 'App\\Filament\\Actions';
+        $namespace = $this->getNamespace($path);
         $defaultName = Str::camel(Str::replaceLast('Action', '', $className));
 
         $content = str_replace(
@@ -118,7 +144,15 @@ class MakeFilamentActionCommand extends Command
             $stubContent
         );
 
-        File::ensureDirectoryExists(app_path('Filament/Actions'));
+        File::ensureDirectoryExists(dirname($path));
         File::put($path, $content);
+    }
+
+    private function getNamespace(string $path): string
+    {
+        $relativePath = Str::after($path, app_path().'/');
+        $namespace = Str::replace('/', '\\', dirname($relativePath));
+
+        return 'App\\'.$namespace;
     }
 }
