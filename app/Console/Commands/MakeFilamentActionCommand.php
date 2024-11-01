@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 use function Laravel\Prompts\info;
+use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
 use function Laravel\Prompts\warning;
 
@@ -16,6 +17,19 @@ class MakeFilamentActionCommand extends Command
     protected $signature = 'make:filament-action {name?}';
 
     protected $description = 'Create a new Filament action class';
+
+    /**
+     * @var array|string[]
+     */
+    protected array $actionTypes = [
+        'form' => 'Filament\\Forms\\Components\\Actions\\Action',
+        'table' => 'Filament\\Tables\\Actions\\Action',
+        'table_bulk' => 'Filament\\Tables\\Actions\\BulkAction',
+        'custom_component' => 'Filament\\Actions\\Action',
+        'infolist' => 'Filament\\Infolists\\Components\\Actions\\Action',
+        'notification' => 'Filament\\Notifications\\Actions\\Action',
+        'global_search' => 'Filament\\GlobalSearch\\Actions\\Action',
+    ];
 
     /**
      * @throws FileNotFoundException
@@ -32,8 +46,9 @@ class MakeFilamentActionCommand extends Command
             return;
         }
 
+        $actionClass = $this->getActionClass();
         $stubContent = $this->getStubContent();
-        $this->generateActionFile($path, $className, $stubContent);
+        $this->generateActionFile($path, $className, $actionClass, $stubContent);
 
         info("$className created successfully at:");
         info($path);
@@ -64,6 +79,24 @@ class MakeFilamentActionCommand extends Command
         return File::exists($path);
     }
 
+    private function getActionClass(): string
+    {
+        $selectedType = select(
+            label: 'What type of action is this for?',
+            options: [
+                'form' => 'Form component action',
+                'table' => 'Table component action',
+                'table_bulk' => 'Table bulk action',
+                'infolist' => 'Infolist component action',
+                'notification' => 'Notification action',
+                'global_search' => 'Global search result action',
+                'custom_component' => 'Custom Component',
+            ]
+        );
+
+        return $this->actionTypes[$selectedType];
+    }
+
     /**
      * @throws FileNotFoundException
      */
@@ -74,14 +107,14 @@ class MakeFilamentActionCommand extends Command
         return File::get($stubPath);
     }
 
-    private function generateActionFile(string $path, string $className, string $stubContent): void
+    private function generateActionFile(string $path, string $className, string $actionClass, string $stubContent): void
     {
         $namespace = 'App\\Filament\\Actions';
         $defaultName = Str::camel(Str::replaceLast('Action', '', $className));
 
         $content = str_replace(
-            ['{{ namespace }}', '{{ className }}', '{{ defaultName }}'],
-            [$namespace, $className, $defaultName],
+            ['{{ namespace }}', '{{ className }}', '{{ defaultName }}', '{{ actionClass }}'],
+            [$namespace, $className, $defaultName, $actionClass],
             $stubContent
         );
 
