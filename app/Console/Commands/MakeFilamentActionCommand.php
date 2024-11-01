@@ -77,7 +77,7 @@ class MakeFilamentActionCommand extends Command
     private function generateActionFile(string $path, string $className, string $stubContent): void
     {
         $namespace = 'App\\Filament\\Actions';
-        $defaultName = Str::snake(Str::replaceLast('Action', '', $className));
+        $defaultName = Str::camel(Str::replaceLast('Action', '', $className));
 
         $content = str_replace(
             ['{{ namespace }}', '{{ className }}', '{{ defaultName }}'],
