@@ -98,15 +98,15 @@ class MakeFilamentActionCommand extends Command
 
         if (count($selectedTypes) === 0) {
             $selectedType = select(
-                label: 'Please select the type you require.',
+                label: 'Please select the type of the Filament Action',
                 options: [
-                    'form' => 'Form component action',
-                    'table' => 'Table component action',
-                    'table-bulk' => 'Table bulk action',
-                    'infolist' => 'Infolist component action',
-                    'notification' => 'Notification action',
-                    'global-search' => 'Global search result action',
-                    'custom-component' => 'Custom Component',
+                    'form' => 'Form',
+                    'table' => 'Table',
+                    'table-bulk' => 'TableBulk',
+                    'infolist' => 'Infolist',
+                    'notification' => 'Notification',
+                    'global-search' => 'GlobalSearch',
+                    'custom-component' => 'Custom',
                 ]
             );
 
