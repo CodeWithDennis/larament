@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 use function Laravel\Prompts\info;
+use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
 use function Laravel\Prompts\warning;
 
@@ -25,8 +26,6 @@ class MakeFilamentActionCommand extends Command
     protected $description = 'Create a new Filament action class';
 
     /**
-     * Mapping of type flags to their corresponding action class.
-     *
      * @var array<string, string>
      */
     protected array $actionTypes = [
@@ -96,11 +95,23 @@ class MakeFilamentActionCommand extends Command
         }
 
         if (count($selectedTypes) === 0) {
-            warning('No action type specified. Please provide one.');
-            exit;
+            $selectedType = select(
+                label: 'What type of action is this for?',
+                options: [
+                    'form' => 'Form component action',
+                    'table' => 'Table component action',
+                    'table-bulk' => 'Table bulk action',
+                    'infolist' => 'Infolist component action',
+                    'notification' => 'Notification action',
+                    'global-search' => 'Global search result action',
+                    'custom-component' => 'Custom Component',
+                ]
+            );
+
+            return (string) $selectedType;
         }
 
-        return key($selectedTypes);
+        return (string) key($selectedTypes);
     }
 
     private function getFilePath(string $className, string $type): string
