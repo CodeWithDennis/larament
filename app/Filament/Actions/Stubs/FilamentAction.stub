@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ actionClass }};
+
+class {{ className }} extends {{ baseClass }}
+{
+    public static function getDefaultName(): ?string
+    {
+        return '{{ defaultName }}';
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // TODO: Add your setup logic here
+    }
+}
