@@ -47,7 +47,7 @@ class MakeFilamentActionCommand extends Command
         $className = $this->getClassName($name);
         $type = $this->getActionType();
         $actionClass = $this->actionTypes[$type];
-        $baseClass = $type === 'table-bulk' ? 'BulkAction' : 'Action';  // Determine base class
+        $baseClass = $type === 'table-bulk' ? 'BulkAction' : 'Action';
         $path = $this->getFilePath($className, $type);
 
         if ($this->fileExists($path)) {
