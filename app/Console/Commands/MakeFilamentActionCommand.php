@@ -14,6 +14,7 @@ use function Laravel\Prompts\warning;
 class MakeFilamentActionCommand extends Command
 {
     protected $signature = 'make:filament-action {name?}';
+
     protected $description = 'Create a new Filament action class';
 
     /**
@@ -27,6 +28,7 @@ class MakeFilamentActionCommand extends Command
 
         if ($this->fileExists($path)) {
             warning("$className already exists.");
+
             return;
         }
 
@@ -49,7 +51,7 @@ class MakeFilamentActionCommand extends Command
 
     private function getClassName(string $name): string
     {
-        return Str::studly($name) . 'Action';
+        return Str::studly($name).'Action';
     }
 
     private function getFilePath(string $className): string
@@ -68,6 +70,7 @@ class MakeFilamentActionCommand extends Command
     private function getStubContent(): string
     {
         $stubPath = app_path('Filament/Actions/Stubs/FilamentAction.stub');
+
         return File::get($stubPath);
     }
 
