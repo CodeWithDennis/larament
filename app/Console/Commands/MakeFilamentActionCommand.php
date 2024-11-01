@@ -38,9 +38,6 @@ class MakeFilamentActionCommand extends Command
         'global-search' => 'Filament\\GlobalSearch\\Actions\\Action',
     ];
 
-    /**
-     * @throws FileNotFoundException
-     */
     public function handle(): void
     {
         $name = $this->getNameArgument();
