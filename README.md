@@ -35,6 +35,7 @@ Kickstart your project and save time with Larament! This time-saving starter kit
 - All component labels are automatically translatable.
 - A `composer review` command that runs PINT, PHPStan, and PEST.
 - Helper file is included for custom helper functions.
+- A custom `php artisan make:filament-action` command is available for creating actions.
 
 ### Design
 ![user-global-search](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/user-global-search.jpg)
