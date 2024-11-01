@@ -73,7 +73,9 @@ class MakeFilamentActionCommand extends Command
 
     private function getClassName(string $name): string
     {
-        return Str::endsWith($name, 'Action') ? Str::studly($name) : Str::studly($name).'Action';
+        return Str::endsWith(Str::lower($name), 'action')
+            ? Str::studly($name)
+            : Str::studly($name).'Action';
     }
 
     private function getActionType(): string
