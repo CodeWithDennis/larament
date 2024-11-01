@@ -92,6 +92,7 @@ class MakeFilamentActionCommand extends Command
 
         if (count($selectedTypes) > 1) {
             warning('Please specify only one action type.');
+
             exit;
         }
 
@@ -135,9 +136,6 @@ class MakeFilamentActionCommand extends Command
         return File::exists($path);
     }
 
-    /**
-     * @throws FileNotFoundException
-     */
     private function getStubContent(): string
     {
         $stubPath = app_path('Filament/Actions/Stubs/FilamentAction.stub');
@@ -163,8 +161,7 @@ class MakeFilamentActionCommand extends Command
     private function getNamespace(string $path): string
     {
         $relativePath = Str::after($path, app_path().'/');
-        $namespace = Str::replace('/', '\\', dirname($relativePath));
 
-        return 'App\\'.$namespace;
+        return 'App\\'.Str::replace('/', '\\', dirname($relativePath));
     }
 }
