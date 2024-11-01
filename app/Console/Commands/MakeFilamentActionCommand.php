@@ -66,15 +66,13 @@ class MakeFilamentActionCommand extends Command
     {
         return $this->argument('name') ?? text(
             label: 'Enter the name of the Filament Action',
-            placeholder: 'MyActionName',
             required: 'Action name is required.',
-            hint: "We will append 'Action' to this name, so no need to include it."
         );
     }
 
     private function getClassName(string $name): string
     {
-        return Str::studly($name).'Action';
+        return Str::endsWith($name, 'Action') ? Str::studly($name) : Str::studly($name) . 'Action';
     }
 
     private function getActionType(): string
