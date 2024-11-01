@@ -17,6 +17,7 @@
         "php": "^8.2",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.9",
+        "laravel/pail": "^1.2",
         "laravel/tinker": "^2.9",
         "timokoerber/laravel-one-time-operations": "^1.4"
     },
