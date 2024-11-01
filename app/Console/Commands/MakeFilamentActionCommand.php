@@ -94,7 +94,7 @@ class MakeFilamentActionCommand extends Command
 
         if (count($selectedTypes) === 0) {
             $selectedType = select(
-                label: 'What type of action is this for?',
+                label: 'Please select the type you require.',
                 options: [
                     'form' => 'Form component action',
                     'table' => 'Table component action',
