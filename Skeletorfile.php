@@ -1,5 +1,6 @@
 <?php
 
+use Filament\Support\Colors\Color;
 use NiftyCo\Skeletor\Skeletor;
 
 return function (Skeletor $skeletor) {
@@ -15,6 +16,15 @@ return function (Skeletor $skeletor) {
             ->filter(fn (string $timezone) => str_contains(strtolower($timezone), strtolower($query)))
             ->values()
             ->all()
+    );
+
+    $adminPanelColor = $skeletor->select('What color would you like to use for the FilamentPHP admin panel?',
+        collect(Color::all())
+            ->keys()
+            ->map(fn (string $color) => ucfirst($color))
+            ->flatten()
+            ->values()
+            ->toArray()
     );
 
     $skeletor->intro('Let\'s setup the default user that will be created.');
@@ -51,6 +61,14 @@ return function (Skeletor $skeletor) {
 
     if ($timezone) {
         $skeletor->pregReplaceInFile('/^APP_TIMEZONE=(".*?"|[^"\s]*|)$/m', 'APP_TIMEZONE="'.$timezone.'"', '.env');
+    }
+
+    if ($adminPanelColor) {
+        $skeletor->pregReplaceInFile(
+            "/'primary'\s*=>\s*Color::[A-Za-z0-9]+/",
+            "'primary' => Color::".$adminPanelColor,
+            'app/Providers/Filament/AdminPanelProvider.php'
+        );
     }
 
     if ($skeletor->exists('README.md')) {
