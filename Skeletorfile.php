@@ -3,6 +3,8 @@
 use NiftyCo\Skeletor\Skeletor;
 
 return function (Skeletor $skeletor) {
+    $skeletor->intro('Welcome to Larament setup! Let\'s get started.');
+
     $applicationName = $skeletor->text('What is the application name?', 'Laravel', required: true);
     $name = $skeletor->text('What is the demo username?', 'John Doe', required: true);
     $email = $skeletor->text('What is the demo email?', 'admin@example.com', required: true);
@@ -39,4 +41,6 @@ return function (Skeletor $skeletor) {
     if ($timezone) {
         $skeletor->pregReplaceInFile('/^APP_TIMEZONE=(".*?"|[^"\s]*|)$/m', 'APP_TIMEZONE="'.$timezone.'"', '.env');
     }
+
+    $skeletor->outro('Setup complete.');
 };
