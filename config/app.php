@@ -124,11 +124,12 @@ return [
     ],
 
     /*
-     * Default user credentials for local development environment
-     * This will be used as the default user credentials when seeding the database
+     * Default user credentials for local development environment seeding
+     * Will be used as the default user credentials for login
      */
 
     'default_user' => [
+        'name' => env('DEFAULT_USER_NAME'),
         'email' => env('DEFAULT_USER_EMAIL'),
         'password' => env('DEFAULT_USER_PASSWORD'),
     ],
