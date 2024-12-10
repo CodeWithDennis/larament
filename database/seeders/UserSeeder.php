@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
             ->create([
                 'email' => config('app.default_user.email'),
                 'password' => Hash::make(config('app.default_user.password')),
-                'name' => 'Admin',
+                'name' => config('app.default_user.name'),
             ]);
     }
 }
