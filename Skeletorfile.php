@@ -6,8 +6,8 @@ return function (Skeletor $skeletor) {
     $name = $skeletor->text('Enter the application name:', 'Laravel');
     $email = $skeletor->text('Enter the demo email:', 'admin@example.com');
     $password = $skeletor->password('Enter the demo password:', 'password');
-    $timezone = $skeletor->search('Which timezone do you want to use? ', fn($query) => collect(timezone_identifiers_list())
-        ->filter(fn($timezone) => str_contains(strtolower($timezone), strtolower($query)))
+    $timezone = $skeletor->search('Which timezone do you want to use? ', fn ($query) => collect(timezone_identifiers_list())
+        ->filter(fn ($timezone) => str_contains(strtolower($timezone), strtolower($query)))
         ->values()
         ->all());
 
