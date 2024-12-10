@@ -3,14 +3,17 @@
 use NiftyCo\Skeletor\Skeletor;
 
 return function (Skeletor $skeletor) {
-    $applicationName = $skeletor->text('Enter the application name:', 'Laravel', required: true);
-    $name = $skeletor->text('Enter the demo username', 'John Doe', required: true);
-    $email = $skeletor->text('Enter the demo email:', 'admin@example.com', required: true);
-    $password = $skeletor->password('Enter the demo password:', 'password', required: true);
-    $timezone = $skeletor->search('Which timezone do you want to use? ', fn (string $query) => collect(timezone_identifiers_list())
-        ->filter(fn (string $timezone) => str_contains(strtolower($timezone), strtolower($query)))
-        ->values()
-        ->all());
+    $applicationName = $skeletor->text('What is the application name?', 'Laravel', required: true);
+    $name = $skeletor->text('What is the demo username?', 'John Doe', required: true);
+    $email = $skeletor->text('What is the demo email?', 'admin@example.com', required: true);
+    $password = $skeletor->password('What is the demo password?', 'password', required: true);
+    $timezone = $skeletor->search(
+        'Which timezone would you like to use?',
+        fn (string $query) => collect(timezone_identifiers_list())
+            ->filter(fn (string $timezone) => str_contains(strtolower($timezone), strtolower($query)))
+            ->values()
+            ->all()
+    );
 
     // If the user entered a name, replace the APP_NAME value in the .env file
     if ($applicationName) {
