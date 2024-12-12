@@ -97,7 +97,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-## CLI Installation
+### CLI Installation
 Alternatively, you can use the following command to create a new project with Larament:
 
 ```bash
