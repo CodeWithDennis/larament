@@ -75,13 +75,13 @@ DEFAULT_USER_PASSWORD="password"
 
 The following packages are pre-installed:
 
-- timokoerber/laravel-one-time-operations
-- barryvdh/laravel-debugbar
-- phpstan/phpstan
-- pestphp/pest, along with plugins:
-    - pestphp/pest-plugin-faker
-    - pestphp/pest-plugin-laravel
-    - pestphp/pest-plugin-livewire
+- [timokoerber/laravel-one-time-operations](https://github.com/TimoKoerber/laravel-one-time-operations)
+- [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+- [phpstan/phpstan](https://phpstan.org/user-guide/getting-started)
+- [pestphp/pest](https://pestphp.com/docs/installation)
+  - [pestphp/pest-plugin-faker](https://pestphp.com/docs/plugins#faker)
+  - [pestphp/pest-plugin-laravel](https://pestphp.com/docs/plugins#laravel)
+  - [pestphp/pest-plugin-livewire](https://pestphp.com/docs/plugins#livewire)
 
 ## Installation
 ### Using the Template
