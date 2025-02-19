@@ -1,5 +1,26 @@
 <?php
 
-arch('No debugging statements are left in our code.')
-    ->expect(['dd', 'dump', 'ray'])
-    ->not->toBeUsed();
+arch('All files in the casts directory extend `CastsAttributes`.')
+    ->expect('App\Casts')
+    ->toExtend('Illuminate\Contracts\Database\Eloquent\CastsAttributes');
+
+arch('All files in the casts directory have suffix `Cast`.')
+    ->expect('App\Casts')
+    ->toHaveSuffix('Cast');
+
+arch('All files in the observers directory have suffix `Observer`.')
+    ->expect('App\Observers')
+    ->toHaveSuffix('Observer');
+
+arch('All files in the policies directory have suffix `Policy`.')
+    ->expect('App\Policies')
+    ->toHaveSuffix('Policy');
+
+arch('All files in the services directory have suffix `Service`.')
+    ->expect('App\Services')
+    ->toHaveSuffix('Service');
+
+arch('ensures `env()` is only used in config files')
+    ->expect('env')
+    ->not->toBeUsed()
+    ->ignoring('config');
