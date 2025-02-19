@@ -22,7 +22,6 @@
         "timokoerber/laravel-one-time-operations": "^1.4"
     },
     "require-dev": {
-        "aniftyco/skeletor": "0.1.0",
         "barryvdh/laravel-debugbar": "^3.13",
         "fakerphp/faker": "^1.23",
         "larastan/larastan": "^2.0",
@@ -67,7 +66,6 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "NiftyCo\\Skeletor\\Runner::execute",
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi",
