@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebd8a274979ec21b5d8d62b9f57cad8a",
+    "content-hash": "526f074817700c71c22ac6bb3c0d5e29",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -7606,64 +7606,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "aniftyco/skeletor",
-            "version": "v0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aniftyco/skeletor.git",
-                "reference": "7b4020f35861404a7a48d0fd976ef20e54e724b0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aniftyco/skeletor/zipball/7b4020f35861404a7a48d0fd976ef20e54e724b0",
-                "reference": "7b4020f35861404a7a48d0fd976ef20e54e724b0",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/prompts": "^0.3.1",
-                "php": "^8.1",
-                "symfony/process": "^7.1"
-            },
-            "require-dev": {
-                "composer/composer": "^2.8",
-                "illuminate/collections": "^11.30",
-                "laravel/pint": "^1.18",
-                "pestphp/pest": "^3.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "NiftyCo\\Skeletor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "NiftyCo, LLC",
-                    "homepage": "https://aniftyco.com"
-                },
-                {
-                    "name": "Josh Manders",
-                    "homepage": "https://x.com/joshmanders"
-                }
-            ],
-            "description": "Summon Skeletor's minion: a Composer companion to unleash extra functionality with every `create-project` command.",
-            "homepage": "https://github.com/aniftyco/skeletor",
-            "keywords": [
-                "Skeleton",
-                "composer",
-                "create-project"
-            ],
-            "support": {
-                "issues": "https://github.com/aniftyco/skeletor/issues",
-                "source": "https://github.com/aniftyco/skeletor/tree/v0.1.0"
-            },
-            "time": "2024-11-17T19:50:00+00:00"
-        },
         {
             "name": "barryvdh/laravel-debugbar",
             "version": "v3.14.9",
