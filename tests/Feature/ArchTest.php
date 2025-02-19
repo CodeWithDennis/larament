@@ -1,22 +1,22 @@
 <?php
 
-arch('All files in the casts directory extend `CastsAttributes`.')
+arch('All files in the casts directory extend `CastsAttributes`')
     ->expect('App\Casts')
     ->toExtend('Illuminate\Contracts\Database\Eloquent\CastsAttributes');
 
-arch('All files in the casts directory have suffix `Cast`.')
+arch('All files in the casts directory have suffix `Cast`')
     ->expect('App\Casts')
     ->toHaveSuffix('Cast');
 
-arch('All files in the observers directory have suffix `Observer`.')
+arch('All files in the observers directory have suffix `Observer`')
     ->expect('App\Observers')
     ->toHaveSuffix('Observer');
 
-arch('All files in the policies directory have suffix `Policy`.')
+arch('All files in the policies directory have suffix `Policy`')
     ->expect('App\Policies')
     ->toHaveSuffix('Policy');
 
-arch('All files in the services directory have suffix `Service`.')
+arch('All files in the services directory have suffix `Service`')
     ->expect('App\Services')
     ->toHaveSuffix('Service');
 
