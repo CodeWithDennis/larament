@@ -28,7 +28,6 @@
 ## Features
 
 ### Security and Testing
-![PESTPHP](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/pest-php.png)
 
 - **PESTPHP**: Preconfigured with test cases for streamlined testing. ([Learn more](https://pestphp.com/docs/installation))
 - **Strict mode enabled** via [Should Be Strict](https://laravel-news.com/shouldbestrict):
@@ -40,7 +39,6 @@
 - **Debugging** with Laravel Debugbar.
 
 ### Quality of Life
-![Global Search Keybinding](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/global-search-keybinding.jpg)
 
 - Custom login page autofills email and password with seeded data for quicker testing.
 - Built-in password generator action on the user profile and user resource pages.
