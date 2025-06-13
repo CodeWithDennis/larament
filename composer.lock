@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a65cb6c81efe76c7dab8f0903e686c5",
+    "content-hash": "350afde2c8b3f1eb2d1872b45c3cf599",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -3788,6 +3788,84 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.5.0"
             },
             "time": "2025-05-31T08:24:38+00:00"
+        },
+        {
+            "name": "nunomaduro/essentials",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nunomaduro/essentials.git",
+                "reference": "ccfd36a8e7ec5ad7ce83109775bd75851b123a41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nunomaduro/essentials/zipball/ccfd36a8e7ec5ad7ce83109775bd75851b123a41",
+                "reference": "ccfd36a8e7ec5ad7ce83109775bd75851b123a41",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^11.44.2|^12.17.0",
+                "php": "^8.3.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.22.1",
+                "orchestra/testbench": "^10.3.0",
+                "pestphp/pest": "^3.8.2",
+                "pestphp/pest-plugin-type-coverage": "^3.5.1",
+                "phpstan/phpstan": "^2.1.17",
+                "rector/rector": "^2.0.17",
+                "symfony/var-dumper": "^7.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NunoMaduro\\Essentials\\EssentialsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NunoMaduro\\Essentials\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "Just better defaults for your Laravel projects.",
+            "keywords": [
+                "essentials",
+                "laravel",
+                "laravel-essentials",
+                "package",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/nunomaduro/essentials/issues",
+                "source": "https://github.com/nunomaduro/essentials/tree/v0.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/paypalme/enunomaduro",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2025-06-04T18:20:41+00:00"
         },
         {
             "name": "nunomaduro/termwind",
