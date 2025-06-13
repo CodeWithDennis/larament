@@ -1,7 +1,5 @@
-# Larament (Laravel 12 + Filament 4 beta)
+# Larament (Laravel 12 + Filament 4)
 
-> [!NOTE]  
-> **Filament 4** is currently in beta so use it with caution.
 
 [![Pint](https://github.com/codewithdennis/larament/actions/workflows/pint.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
 [![PEST](https://github.com/codewithdennis/larament/actions/workflows/pest.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
@@ -11,7 +9,11 @@
 
 ![Larament](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/larament.png)
 
+> [!NOTE]  
+> **Filament 4** is currently in beta, please use it with caution in production environments.
+> 
 **Larament** is a time-saving starter kit to quickly launch Laravel `12.x` projects. It includes **FilamentPHP** `4.x` pre-installed and configured, along with additional tools and features to streamline your development workflow.
+
 
 ## Dependencies
 
