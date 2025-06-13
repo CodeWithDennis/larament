@@ -32,6 +32,8 @@ final class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login(Login::class)
             ->spa()
+            ->sidebarCollapsibleOnDesktop()
+//            ->topNavigation()
             ->colors([
                 'primary' => Color::Blue,
             ])
