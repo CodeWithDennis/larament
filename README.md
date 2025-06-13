@@ -14,7 +14,7 @@
 
 This project includes several core dependencies that provide essential functionality:
 
-- **[nunomaduro/essentials](https://github.com/nunomaduro/essentials)**: A collection of essential Laravel tools and helpers
+- **[nunomaduro/essentials](https://github.com/nunomaduro/essentials)**: Essentials provide better defaults for your Laravel applications including strict models, automatically eagerly loaded relationships, immutable dates, and more!
 
 ### Development
 
