@@ -63,6 +63,16 @@
         "test": [
             "@php artisan config:clear --ansi",
             "@php artisan test"
+        ],
+        "pest": "./vendor/bin/pest --parallel",
+        "rector": "./vendor/bin/rector process --ansi",
+        "pint": "./vendor/bin/pint",
+        "phpstan": "./vendor/bin/phpstan analyse",
+        "review": [
+            "@pint",
+            "@rector",
+            "@pest",
+            "@phpstan"
         ]
     },
     "extra": {
