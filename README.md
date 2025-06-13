@@ -1,4 +1,7 @@
-# Larament
+# Larament (Laravel 12 + Filament 4 beta)
+
+> [!NOTE]  
+> **Filament 4** is currently in beta so use it with caution.
 
 [![Pint](https://github.com/codewithdennis/larament/actions/workflows/pint.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
 [![PEST](https://github.com/codewithdennis/larament/actions/workflows/pest.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
