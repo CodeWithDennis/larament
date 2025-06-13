@@ -39,10 +39,5 @@ composer create-project codewithdennis/larament your-project-name && \
 cd your-project-name && \
 composer install && \
 npm install && \
-npm run build && \
-cp .env.example .env && \
-php artisan key:generate && \
-php artisan migrate && \
-php artisan make:filament-user && \
 php artisan serve
 ```
