@@ -71,8 +71,8 @@
         "review": [
             "@pint",
             "@rector",
-            "@pest",
-            "@phpstan"
+            "@phpstan",
+            "@pest"
         ]
     },
     "extra": {

@@ -49,6 +49,20 @@ All Filament tables are pre-configured with:
 - **Striped Rows**: For better visual separation between rows
 - **Deferred Loading**: Improves performance by loading table data after the initial page load
 
+## Development Commands
+
+Larament includes a convenient composer command to streamline your development workflow:
+
+```bash
+composer review
+```
+
+This command runs all code quality tools in sequence:
+- Laravel Pint for code style fixing
+- Rector for automated code refactoring
+- PHPStan for static analysis
+- Pest for testing
+
 ## Installation
 
 Create a new Larament project and set it up with a single command:
