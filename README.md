@@ -29,3 +29,20 @@ This project includes several development dependencies to ensure code quality an
 - **[rector/rector](https://github.com/rectorphp/rector)**: Automated code refactoring tool
 
 These tools help maintain code quality, provide testing capabilities, and improve the development experience.
+
+## Installation
+
+Create a new Larament project and set it up with a single command:
+
+```bash
+composer create-project codewithdennis/larament your-project-name && \
+cd your-project-name && \
+composer install && \
+npm install && \
+npm run build && \
+cp .env.example .env && \
+php artisan key:generate && \
+php artisan migrate && \
+php artisan make:filament-user && \
+php artisan serve
+```
