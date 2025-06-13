@@ -1,9 +1,9 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "codewithdennis/larament",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Larament is a time-saving starter kit to quickly launch Laravel 12.x projects. It includes FilamentPHP 4.x pre-installed and configured, along with additional tools and features to streamline your development workflow.",
+    "keywords": ["laravel", "framework", "filamentphp", "starter-kit", "larament"],
     "license": "MIT",
     "require": {
         "php": "^8.2",
