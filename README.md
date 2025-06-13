@@ -33,7 +33,9 @@ This project includes several development dependencies to ensure code quality an
 - **[pestphp/pest-plugin-livewire](https://pestphp.com/docs/plugins)**: Livewire testing utilities for Pest
 - **[rector/rector](https://github.com/rectorphp/rector)**: Automated code refactoring tool
 
-These tools help maintain code quality, provide testing capabilities, and improve the development experience.
+These tools help maintain code quality, provide testing capabilities, and improve the development experience. Larament comes with a bunch of tests to ensure everything works as expected.
+
+![default-tests.png](resources/images/default-tests.png)
 
 ## Default Configurations
 
