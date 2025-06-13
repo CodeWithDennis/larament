@@ -19,6 +19,7 @@ final class UserForm
                     ->email()
                     ->required(),
                 TextInput::make('password')
+                    ->autocomplete('new-password')
                     ->password()
                     ->required(),
             ]);
