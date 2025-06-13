@@ -46,6 +46,8 @@ Larament comes with several pre-configured settings to enhance your development 
 - **Color Scheme**: Uses Filament's Blue color as the primary theme
 - **Authentication**: Custom login page with auto-filled credentials in local environment for easier development
 
+![Login](resources/images/login-page.png)
+ 
 ### Table Configuration
 All Filament tables are pre-configured with:
 - **Striped Rows**: For better visual separation between rows
