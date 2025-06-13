@@ -41,3 +41,16 @@ composer install
 npm install
 php artisan serve
 ```
+
+### Create a terminal alias
+For easier usage in future projects, create an alias in your terminal:
+
+```bash
+alias larament="composer create-project --prefer-dist CodeWithDennis/larament"
+```
+
+Now, you can create a new project with a simple command:
+
+```bash
+larament basecamp
+```
