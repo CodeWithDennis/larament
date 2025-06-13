@@ -35,6 +35,21 @@ This project includes several development dependencies to ensure code quality an
 
 These tools help maintain code quality, provide testing capabilities, and improve the development experience.
 
+## Default Configurations
+
+Larament comes with several pre-configured settings to enhance your development experience:
+
+### Filament Admin Panel
+- **SPA Mode**: Enabled by default for a smoother, more responsive admin experience
+- **Color Scheme**: Uses Filament's Blue color as the primary theme
+- **Authentication**: Custom login page with auto-filled credentials in local environment for easier development
+- **Resource Discovery**: Automatically discovers and registers Filament resources, pages, and widgets
+
+### Table Configuration
+All Filament tables are pre-configured with:
+- **Striped Rows**: For better visual separation between rows
+- **Deferred Loading**: Improves performance by loading table data after the initial page load
+
 ## Installation
 
 Create a new Larament project and set it up with a single command:
