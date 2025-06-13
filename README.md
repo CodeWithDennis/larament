@@ -35,9 +35,9 @@ These tools help maintain code quality, provide testing capabilities, and improv
 Create a new Larament project and set it up with a single command:
 
 ```bash
-composer create-project codewithdennis/larament your-project-name && \
-cd your-project-name && \
-composer install && \
-npm install && \
+composer create-project codewithdennis/larament your-project-name
+cd your-project-name 
+composer install
+npm install
 php artisan serve
 ```
