@@ -75,6 +75,7 @@ Create a new Larament project and set it up with a single command:
 ```bash
 composer create-project codewithdennis/larament your-project-name
 cd your-project-name 
+npm install
 composer install
 npm install
 php artisan serve
