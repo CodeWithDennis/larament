@@ -56,10 +56,25 @@ All Filament tables are pre-configured with:
 ![Users Table](resources/images/users-table.png)
 
 ### Laravel Migration Stubs
-Larament includes custom migration stubs that:
-- Removes the `down()` method by default
+Larament includes custom migration stubs that removes the `down()` method by default. The removal of the `down()` method is a debated topic in the Laravel community - while some developers prefer to keep it for rollback capabilities, others find it rarely used in practice. If you prefer to keep the `down()` method, you can simply remove these custom stubs and Laravel will use its default migration templates.
 
-This helps keep your migrations more concise and focused on the actual schema changes. The removal of the `down()` method is a debated topic in the Laravel community - while some developers prefer to keep it for rollback capabilities, others find it rarely used in practice. If you prefer to keep the `down()` method, you can simply remove these custom stubs and Laravel will use its default migration templates.
+```php
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class() extends Migration
+{
+    public function up(): void
+    {
+        //
+    }
+};
+```
 
 ## Development Commands
 
