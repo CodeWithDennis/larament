@@ -76,6 +76,18 @@ return new class() extends Migration
 };
 ```
 
+### Helper Functions
+Larament comes with a pre-configured `app/Helpers.php` file where you can define your own helper functions. The file is already set up in your `composer.json` for autoloading. Here's an example of how to add your own helper functions:
+
+```php
+if (! function_exists('example')) {
+    function example(): string
+    {
+        return 'This is an example function you can use in your project.';
+    }
+}
+```
+
 ## Development Commands
 
 Larament includes a convenient composer command to streamline your development workflow:
