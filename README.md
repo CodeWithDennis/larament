@@ -38,7 +38,7 @@ These tools help maintain code quality, provide testing capabilities, and improv
 
 ![default-tests.png](resources/images/default-tests.png)
 
-## Default Configurations
+## Configurations
 
 Larament comes with several pre-configured settings to enhance your development experience:
 
