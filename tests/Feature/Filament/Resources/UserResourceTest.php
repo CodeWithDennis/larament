@@ -57,6 +57,7 @@ it('can sort column', function (string $column) {
     $records = User::factory(5)->create();
 
     livewire(ListUsers::class)
+        ->loadTable()
         ->sortTable($column)
         ->assertCanSeeTableRecords($records->sortBy($column), inOrder: true)
         ->sortTable($column, 'desc')
@@ -69,6 +70,7 @@ it('can search column', function (string $column) {
     $value = $records->first()->{$column};
 
     livewire(ListUsers::class)
+        ->loadTable()
         ->searchTable($value)
         ->assertCanSeeTableRecords($records->where($column, $value))
         ->assertCanNotSeeTableRecords($records->where($column, '!=', $value));
@@ -130,6 +132,7 @@ it('can bulk delete users', function () {
     $users = User::factory()->count(5)->create();
 
     livewire(ListUsers::class)
+        ->loadTable()
         ->assertCanSeeTableRecords($users)
         ->selectTableRecords($users)
         ->callAction(TestAction::make(DeleteBulkAction::class)->table()->bulk())
