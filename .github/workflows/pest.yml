@@ -1,0 +1,51 @@
+name: Tests
+
+on: [ push ]
+
+jobs:
+  tests:
+    name: Application Operational Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start MYSQL
+        run: |
+          sudo systemctl enable mysql.service
+          sudo systemctl start mysql.service
+          mysql --host 127.0.0.1 -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS laravel;'
+          mysql --host 127.0.0.1 -uroot -proot -e "SELECT @@global.secure_file_priv, @@global.local_infile"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv
+          coverage: none
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Install NodeJS dependencies
+        run: |
+          npm install
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Prepare Application
+        run: |
+          php artisan config:clear
+          cp .env.example .env
+          php artisan key:generate
+          php artisan storage:link
+          npm run build
+
+      - name: Migrations
+        run: php artisan migrate --force -v
+
+      - name: PEST
+        run: php artisan test --parallel
