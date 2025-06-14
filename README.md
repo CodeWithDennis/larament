@@ -42,7 +42,7 @@ Larament comes with several pre-configured settings to enhance your development 
 
 ### Filament Admin Panel
 - **SPA Mode**: Enabled by default for a smoother, more responsive admin experience
-- **Color Scheme**: Uses Filament's Blue color as the primary theme
+- **Color**: `Color::Blue` color as the primary color
 - **Authentication**: Custom login page with auto-filled credentials in local environment for easier development
 - **Custom Theme**: Includes a pre-configured custom theme, allowing for easy styling customization and consistent design across your admin panel
 

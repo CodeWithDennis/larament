@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * Here you can define your own helper functions.
  * Make sure to use the `function_exists` check to not declare the function twice.
