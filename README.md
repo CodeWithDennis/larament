@@ -111,6 +111,7 @@ composer create-project codewithdennis/larament your-project-name
 cd your-project-name 
 composer install
 npm install
+npm run build
 php artisan serve
 ```
 
