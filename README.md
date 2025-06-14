@@ -11,12 +11,13 @@
 > [!CAUTION]
 > **Filament 4** is currently in beta — use it cautiously in production.
 
+
 ## Dependencies
 
 This project includes several core dependencies that provide essential functionality:
 
 - **[nunomaduro/essentials](https://github.com/nunomaduro/essentials)**: Essentials provide better defaults for your Laravel applications including strict models, automatically eagerly loaded relationships, immutable dates, and more!
-  - All models are unguarded by default.
+
 
 ### Development
 
@@ -53,7 +54,13 @@ All Filament tables are pre-configured with:
 - **Deferred Loading**: Improves performance by loading table data after the initial page load
 
 ![Users Table](resources/images/users-table.png)
- 
+
+### Migration Stubs
+Larament includes custom migration stubs that:
+- Removes the `down()` method by default
+
+This helps keep your migrations more concise and focused on the actual schema changes. The removal of the `down()` method is a debated topic in the Laravel community - while some developers prefer to keep it for rollback capabilities, others find it rarely used in practice. If you prefer to keep the `down()` method, you can simply remove these custom stubs and Laravel will use its default migration templates.
+
 ## Development Commands
 
 Larament includes a convenient composer command to streamline your development workflow:
@@ -75,8 +82,6 @@ Create a new Larament project and set it up with a single command:
 ```bash
 composer create-project codewithdennis/larament your-project-name
 cd your-project-name 
-npm install
-npm run build
 composer install
 npm install
 php artisan serve
