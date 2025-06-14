@@ -36,7 +36,7 @@ This project includes several development dependencies to ensure code quality an
 
 These tools help maintain code quality, provide testing capabilities, and improve the development experience. Larament comes with a bunch of tests to ensure everything works as expected.
 
-![default-tests.png](resources/images/default-tests.png)
+![default-tests.png](resources/images/tests.png)
 
 ## Configurations
 
@@ -55,6 +55,8 @@ All Filament tables are pre-configured with:
 - **Striped Rows**: For better visual separation between rows
 - **Deferred Loading**: Improves performance by loading table data after the initial page load
 
+![Users Table](resources/images/users-table.png)
+ 
 ## Development Commands
 
 Larament includes a convenient composer command to streamline your development workflow:
