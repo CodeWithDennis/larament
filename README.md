@@ -6,7 +6,7 @@
 [![Total Installs](https://img.shields.io/packagist/dt/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 
-![Larament](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/larament.png)
+![Larament](https://raw.githubusercontent.com/CodeWithDennis/larament/3.x/resources/images/larament.png)
 
 **Larament** is a time-saving starter kit to quickly launch Laravel projects. It includes **FilamentPHP** pre-installed and configured, along with additional tools and features to streamline your development workflow.
 
@@ -49,7 +49,7 @@
 - Custom `php artisan make:filament-action` command for generating Filament actions.
 
 ### Design
-![User Global Search](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/user-global-search.jpg)
+![User Global Search](https://raw.githubusercontent.com/CodeWithDennis/larament/3.x/resources/images/user-global-search.jpg)
 
 - Filament Panel's primary color is preset to blue.
 - Single Page Application (SPA) mode enabled by default.
