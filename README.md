@@ -6,7 +6,7 @@
 [![Total Installs](https://img.shields.io/packagist/dt/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 
-Larament is a bloat-free starter kit for quickly launching **Laravel 12.x** projects. It comes with **FilamentPHP 4.x** pre-installed and configured, plus essential tools to speed up your development—nothing more, nothing unnecessary.
+Larament is a **bloat-free starter kit** for quickly launching **Laravel 12.x** projects. It comes with **FilamentPHP 4.x** pre-installed and configured, plus essential tools to speed up your development—nothing more, nothing unnecessary.
 
 > [!CAUTION]
 > **Filament 4** is currently in beta — use it cautiously in production.
