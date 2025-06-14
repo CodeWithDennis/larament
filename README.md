@@ -7,7 +7,7 @@
 [![Total Installs](https://img.shields.io/packagist/dt/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 
-![Larament](https://raw.githubusercontent.com/CodeWithDennis/larament/main/resources/images/larament.png)
+![Larament](resources/images/thumbnail.png)
 
 > [!CAUTION]
 > **Filament 4** is currently in beta, please use it with caution in production environments.
