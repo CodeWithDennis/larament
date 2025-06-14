@@ -48,14 +48,14 @@ Larament comes with several pre-configured settings to enhance your development 
 
 ![Login](resources/images/login-page.png)
  
-### Table Configuration
+### Filament Table Configuration
 All Filament tables are pre-configured with:
 - **Striped Rows**: For better visual separation between rows
 - **Deferred Loading**: Improves performance by loading table data after the initial page load
 
 ![Users Table](resources/images/users-table.png)
 
-### Migration Stubs
+### Laravel Migration Stubs
 Larament includes custom migration stubs that:
 - Removes the `down()` method by default
 
