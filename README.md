@@ -32,6 +32,7 @@ This project includes several development dependencies to ensure code quality an
 - **[pestphp/pest-plugin-laravel](https://pestphp.com/docs/plugins)**: Laravel integration for Pest
 - **[pestphp/pest-plugin-livewire](https://pestphp.com/docs/plugins)**: Livewire testing utilities for Pest
 - **[rector/rector](https://github.com/rectorphp/rector)**: Automated code refactoring tool
+- **[barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)**: A package that providing insights into queries, requests, and performance metrics during development.
 
 These tools help maintain code quality, provide testing capabilities, and improve the development experience. Larament comes with a bunch of tests to ensure everything works as expected.
 
@@ -90,4 +91,12 @@ Now, you can create a new project with a simple command:
 
 ```bash
 larament basecamp
+```
+
+## Development Dependencies
+
+- **Laravel Debugbar**: A package that integrates the PHP Debug Bar into Laravel, providing insights into queries, requests, and performance metrics during development.
+
+```bash
+composer require barryvdh/laravel-debugbar --dev
 ```
