@@ -11,12 +11,12 @@
 > [!CAUTION]
 > **Filament 4** is currently in beta — use it cautiously in production.
 
-
 ## Dependencies
 
 This project includes several core dependencies that provide essential functionality:
 
 - **[nunomaduro/essentials](https://github.com/nunomaduro/essentials)**: Essentials provide better defaults for your Laravel applications including strict models, automatically eagerly loaded relationships, immutable dates, and more!
+  - All models are unguarded by default.
 
 ### Development
 
@@ -33,7 +33,7 @@ This project includes several development dependencies to ensure code quality an
 
 These tools help maintain code quality, provide testing capabilities, and improve the development experience. Larament comes with a bunch of tests to ensure everything works as expected.
 
-![default-tests.png](resources/images/tests.png)
+![Tests](resources/images/tests.png)
 
 ## Configurations
 
