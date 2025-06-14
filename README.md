@@ -18,6 +18,9 @@ This project includes several core dependencies that provide essential functiona
 
 - **[nunomaduro/essentials](https://github.com/nunomaduro/essentials)**: Essentials provide better defaults for your Laravel applications including strict models, automatically eagerly loaded relationships, immutable dates, and more!
 
+## Known Issues
+
+- **Table Configuration**: The global table configuration using `Table::configureUsing()` in `AppServiceProvider` is currently broken. This is a known issue in Filament 4 beta. You'll need to configure table settings individually in each table's configuration until this is fixed.
 
 ### Development
 
