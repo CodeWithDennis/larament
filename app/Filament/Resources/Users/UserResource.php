@@ -29,9 +29,7 @@ final class UserResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return UsersTable::configure($table)
-            ->striped() // Can be removed once `configureUsing` issue is resolved. (https://github.com/filamentphp/filament/issues/16504)
-            ->deferLoading();
+        return UsersTable::configure($table);
     }
 
     public static function getRelations(): array

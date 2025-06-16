@@ -14,10 +14,6 @@ Larament is a **bloat-free starter kit** for quickly launching **Laravel 12.x** 
 > [!NOTE]
 > Larament requires **PHP 8.3** or higher to run.
 
-## Known Issues
-
-- **Table Configuration**: The global table configuration using `Table::configureUsing()` in `AppServiceProvider` is currently broken. This is a known issue in Filament 4 beta. You'll need to configure table settings individually in each table's configuration until this is fixed.
-
 ## Dependencies
 
 This project includes several core dependencies that provide essential functionality:
