@@ -29,4 +29,4 @@ arch('ensures `env()` is only used in config files')
 
 arch('No file in the app directory uses `die`, `dd`, or `dump`.')
     ->expect('App')
-    ->not->toUse(['die', 'dd', 'dump']);
+    ->not->toUse(['die', 'dd', 'dump', 'ray']);
