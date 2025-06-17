@@ -130,11 +130,3 @@ Now, you can create a new project with a simple command:
 ```bash
 larament basecamp
 ```
-
-## Development Dependencies
-
-- **Laravel Debugbar**: A package that integrates the PHP Debug Bar into Laravel, providing insights into queries, requests, and performance metrics during development.
-
-```bash
-composer require barryvdh/laravel-debugbar --dev
-```
