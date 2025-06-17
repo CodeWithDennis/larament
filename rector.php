@@ -3,8 +3,13 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
+use Rector\Php83\Rector\ClassMethod\AddOverrideAttributeToOverriddenMethodsRector;
 
 return RectorConfig::configure()
+    ->withPhpSets()
+    ->withSkip([
+        AddOverrideAttributeToOverriddenMethodsRector::class,
+    ])
     ->withPaths([
         __DIR__.'/app',
         __DIR__.'/bootstrap/app.php',
@@ -18,5 +23,4 @@ return RectorConfig::configure()
         privatization: true,
         earlyReturn: true,
         strictBooleans: true,
-    )
-    ->withPhpSets();
+    );
