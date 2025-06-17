@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Providers\Filament;
 
 use App\Filament\Pages\Auth\Login;
+use Filament\Auth\MultiFactor\App\AppAuthentication;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -32,6 +33,11 @@ final class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login(Login::class)
             ->spa()
+            ->profile()
+            ->multiFactorAuthentication(
+                AppAuthentication::make()
+                    ->recoverable(),
+            )
             ->sidebarCollapsibleOnDesktop()
 //            ->topNavigation()
             ->colors([
