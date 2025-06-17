@@ -42,10 +42,12 @@ These tools help maintain code quality, provide testing capabilities, and improv
 Larament comes with several pre-configured settings to enhance your development experience:
 
 ### Filament Admin Panel
-- **SPA Mode**: Enabled by default for a smoother, more responsive admin experience
-- **Color**: `Color::Blue` color as the primary color
-- **Authentication**: Custom login page with auto-filled credentials in local environment for easier development
-- **Custom Theme**: Includes a pre-configured custom theme, allowing for easy styling customization and consistent design across your admin panel
+- SPA Mode enabled by default for a smoother, more responsive admin experience
+- `Color::Blue` color as the primary color
+- Custom login page with autofilled credentials in local environment for easier development
+- Includes a pre-configured custom theme, allowing for easy styling customization and consistent design across your admin panel
+- Profile enabled by default, allowing users to manage their profiles directly from the admin panel
+- (MFA) is enabled by default (App Authentication), providing an extra layer of security for your admin panel
 
 ![Login](resources/images/login-page.png)
  
