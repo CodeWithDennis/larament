@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use AchyutN\FilamentLogViewer\FilamentLogViewer;
 use App\Filament\Pages\App\Profile;
 use App\Filament\Pages\Auth\Login;
 use Filament\Http\Middleware\Authenticate;

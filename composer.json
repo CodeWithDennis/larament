@@ -15,6 +15,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "achyutn/filament-log-viewer": "^0.5",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.9",
         "laravel/pail": "^1.2",
