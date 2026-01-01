@@ -21,7 +21,7 @@
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
-        "pestphp/pest": "^v4.0.2",
+        "pestphp/pest": "^v4.1.6",
         "pestphp/pest-plugin-browser": "v4.0.2",
         "pestphp/pest-plugin-faker": "^v4.0.0",
         "pestphp/pest-plugin-laravel": "^v4.0.0",
