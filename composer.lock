@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78305ba81c72e687eacc3036a5ebc8b4",
+    "content-hash": "aaca4f492f74101aee6084180facbb44",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -10957,32 +10957,32 @@
         },
         {
             "name": "pestphp/pest-plugin-browser",
-            "version": "v4.1.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-browser.git",
-                "reference": "da70fce21e4b33ba22bef1276f654e77676213d7"
+                "reference": "442843b9c9940a3be4661fa71d15ce78327f870b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest-plugin-browser/zipball/da70fce21e4b33ba22bef1276f654e77676213d7",
-                "reference": "da70fce21e4b33ba22bef1276f654e77676213d7",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-browser/zipball/442843b9c9940a3be4661fa71d15ce78327f870b",
+                "reference": "442843b9c9940a3be4661fa71d15ce78327f870b",
                 "shasum": ""
             },
             "require": {
-                "amphp/amp": "^3.1.1",
+                "amphp/amp": "^3.1.0",
                 "amphp/http-server": "^3.4.3",
-                "amphp/websocket-client": "^2.0.2",
+                "amphp/websocket-client": "^2.0.1",
                 "ext-sockets": "*",
-                "pestphp/pest": "^4.1.0",
+                "pestphp/pest": "^4.0.0",
                 "pestphp/pest-plugin": "^4.0.0",
                 "php": "^8.3",
-                "symfony/process": "^7.3.4"
+                "symfony/process": "^7.3.0"
             },
             "require-dev": {
                 "ext-pcntl": "*",
                 "ext-posix": "*",
-                "livewire/livewire": "^3.6.4",
+                "livewire/livewire": "dev-main",
                 "nunomaduro/collision": "^8.8.2",
                 "orchestra/testbench": "^10.6.0",
                 "pestphp/pest-dev-tools": "^4.0.0",
@@ -11020,7 +11020,7 @@
                 "unit"
             ],
             "support": {
-                "source": "https://github.com/pestphp/pest-plugin-browser/tree/v4.1.1"
+                "source": "https://github.com/pestphp/pest-plugin-browser/tree/v4.0.2"
             },
             "funding": [
                 {
@@ -11036,7 +11036,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2025-09-29T01:31:33+00:00"
+            "time": "2025-08-22T08:18:12+00:00"
         },
         {
             "name": "pestphp/pest-plugin-faker",
