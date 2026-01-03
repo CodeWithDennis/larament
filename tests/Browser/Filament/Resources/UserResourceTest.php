@@ -16,7 +16,7 @@ it('can create a new user', function () {
         ->fill('form.name', $user->name)
         ->fill('form.email', $user->email)
         ->fill('form.password', 'password')
-        ->click('[type="submit"][wire\\:target="create"]')
+        ->press('.fi-ac-btn-action[type=submit]')
         ->assertSee('Created');
 
     assertDatabaseHas('users', [
@@ -32,7 +32,7 @@ it('can edit an existing user', function () {
         ->click('Users')
         ->click('Edit')
         ->fill('form.name', $newRecord->name)
-        ->click('[type="submit"][wire\\:target="save"]')
+        ->click('.fi-ac-btn-action[type=submit]')
         ->assertSee('Saved');
 
     assertDatabaseHas('users', [
@@ -45,7 +45,7 @@ it('can delete an existing user', function () {
         ->click('Users')
         ->click('Edit')
         ->click('Delete')
-        ->click('[type="submit"][wire\\:target="callMountedAction"]')
+        ->click('.fi-modal-window button[type=submit]')
         ->assertSee('Deleted');
 
     assertDatabaseMissing('users', [
