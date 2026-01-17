@@ -15,7 +15,7 @@ A **bloat-free starter kit** for Laravel 12.x with FilamentPHP 4.x pre-configure
 
 ### Core Dependencies
 - **Laravel 12.x** - The PHP framework
-- **FilamentPHP 4.x** - Admin panel with SPA mode, custom theme, and MFA enabled
+- **FilamentPHP 5.x** - Admin panel with SPA mode, custom theme, and MFA enabled
 - **nunomaduro/essentials** - Better Laravel defaults (strict models, auto-eager loading, immutable dates)
 
 ### Development Tools
