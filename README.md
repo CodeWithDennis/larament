@@ -6,7 +6,7 @@
 [![Total Installs](https://img.shields.io/packagist/dt/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 
-A **bloat-free starter kit** for Laravel 12.x with FilamentPHP 4.x pre-configured. Only essential development tools included.
+A **bloat-free starter kit** for Laravel 12.x with FilamentPHP 5.x pre-configured. Only essential development tools included.
 
 > [!NOTE]
 > Requires **PHP 8.3** or higher.
