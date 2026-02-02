@@ -10,7 +10,9 @@
         "filament/filament": "^4.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "nunomaduro/essentials": "^0.1"
+        "nunomaduro/essentials": "^0.1",
+        "psy/psysh": "^0.12.19",
+        "symfony/process": "^7.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.15",
