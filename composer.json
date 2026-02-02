@@ -28,7 +28,7 @@
         "pestphp/pest-plugin-faker": "^v4.0.0",
         "pestphp/pest-plugin-laravel": "^v4.0.0",
         "pestphp/pest-plugin-livewire": "^v4.0.1",
-        "phpunit/phpunit": "^12.3.5",
+        "phpunit/phpunit": "^12.5.8",
         "rector/rector": "^2.0"
     },
     "autoload": {
