@@ -9,6 +9,7 @@ $filesToRemove = [
     'resources/images/login-page.png',
     'resources/images',
     'app/Console/Commands/Welcome.php',
+    '.github/FUNDING.yml',
     __FILE__,
 ];
 
