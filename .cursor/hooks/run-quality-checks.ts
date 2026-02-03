@@ -5,10 +5,10 @@ type StopHookInput = {
   status?: "completed" | "aborted" | "error";
 };
 
-const COMMANDS: Array<[string, string]> = [
-  ["rector", "./vendor/bin/rector --ansi"],
-  ["phpstan", "./vendor/bin/phpstan analyse --memory-limit=512M"],
-];
+const COMMAND = {
+  tool: "phpstan",
+  cmd: "./vendor/bin/phpstan analyse --memory-limit=512M",
+};
 
 async function parseInput(): Promise<StopHookInput> {
   const chunks: Buffer[] = [];
@@ -32,16 +32,19 @@ function hasGitChanges(): boolean {
   return result.stdout.toString().trim().length > 0;
 }
 
-function runCommand(_name: string, cmd: string): boolean {
+function runCommand(
+  _name: string,
+  cmd: string,
+): { ok: boolean; output: string } {
   const result = spawnSync(cmd, {
     stdio: ["inherit", "pipe", "pipe"],
     shell: true,
   });
   const out = result.stdout?.toString() ?? "";
   const err = result.stderr?.toString() ?? "";
-  if (out) process.stderr.write(out);
-  if (err) process.stderr.write(err);
-  return result.status === 0;
+  const output = [out, err].filter(Boolean).join("\n").trim();
+  if (output) process.stderr.write(output);
+  return { ok: result.status === 0, output };
 }
 
 async function main(): Promise<void> {
@@ -57,20 +60,21 @@ async function main(): Promise<void> {
     return;
   }
 
-  const failures: string[] = [];
-  for (const [tool, cmd] of COMMANDS) {
-    if (!runCommand(tool, cmd)) {
-      failures.push(tool);
-    }
-  }
+  const { ok, output } = runCommand(COMMAND.tool, COMMAND.cmd);
+  const failures = ok ? [] : [{ tool: COMMAND.tool, output }];
 
-  const output =
+  const result =
     failures.length > 0
       ? {
-        followup_message: `Please fix the errors reported by ${failures.join(", ")}.\nDon't do any other investigation.`,
+        followup_message: [
+          `Please fix the errors reported by ${COMMAND.tool}.`,
+          "Don't do any other investigation.",
+          "",
+          `<${COMMAND.tool}-errors>\n${output || "(no output)"}\n</${COMMAND.tool}-errors>`,
+        ].join("\n"),
       }
       : {};
-  process.stdout.write(JSON.stringify(output) + "\n");
+  process.stdout.write(JSON.stringify(result) + "\n");
 }
 
 main().catch((err) => {
