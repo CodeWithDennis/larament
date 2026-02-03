@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "hooks": {
+    "stop": [
+      {
+        "command": "npx tsx .cursor/hooks/run-phpstan-on-stop.ts"
+      }
+    ]
+  }
+}

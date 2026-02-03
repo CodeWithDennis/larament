@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+---
+
+# Code formatters & refactors (auto-updating tools)
+
+These tools modify code automatically. Run them before finalizing changes so the codebase stays consistent.
+
+## Rector
+
+- Run `vendor/bin/rector --ansi` before finalizing changes so refactoring rules are applied.
+- Rector updates code on its own; run it to keep the codebase aligned with configured rules.
