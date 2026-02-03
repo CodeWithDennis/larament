@@ -3,7 +3,7 @@
   "hooks": {
     "stop": [
       {
-        "command": ".cursor/hooks/run-quality-checks.sh"
+        "command": "npx tsx .cursor/hooks/run-quality-checks.ts"
       }
     ]
   }
