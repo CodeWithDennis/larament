@@ -78,6 +78,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  console.error("[run-quality-checks]", err);
+  console.error("[run-phpstan-on-stop]", err);
   process.stdout.write(JSON.stringify({}) + "\n");
 });
