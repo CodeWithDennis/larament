@@ -35,9 +35,13 @@ function hasGitChanges(): boolean {
 
 function runCommand(_name: string, cmd: string): boolean {
   const result = spawnSync(cmd, {
-    stdio: "inherit",
+    stdio: ["inherit", "pipe", "pipe"],
     shell: true,
   });
+  const out = result.stdout?.toString() ?? "";
+  const err = result.stderr?.toString() ?? "";
+  if (out) process.stderr.write(out);
+  if (err) process.stderr.write(err);
   return result.status === 0;
 }
 
