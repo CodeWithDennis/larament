@@ -4,11 +4,14 @@ set -uo pipefail
 
 payload="$(cat)"
 
-status="$(printf '%s' "$payload" | python3 - <<'PY'
-import json, sys
+status="$(PAYLOAD="$payload" python3 - <<'PY'
+import json
+import os
+
+payload = os.environ.get("PAYLOAD", "")
 
 try:
-    data = json.load(sys.stdin)
+    data = json.loads(payload)
 except json.JSONDecodeError:
     print("")
 else:
@@ -26,16 +29,19 @@ if ! git status --porcelain --untracked-files | grep -q '.'; then
     exit 0
 fi
 
-declare -A commands=(
-    ["pint"]="./vendor/bin/pint --dirty"
-    ["rector"]="./vendor/bin/rector --ansi"
-    ["phpstan"]="./vendor/bin/phpstan analyse --memory-limit=512M"
-)
-
 failures=()
 
-for tool in "${!commands[@]}"; do
-    if ! eval "${commands[$tool]}"; then
+commands=(
+    "pint|./vendor/bin/pint --dirty"
+    "rector|./vendor/bin/rector --ansi"
+    "phpstan|./vendor/bin/phpstan analyse --memory-limit=512M"
+)
+
+for entry in "${commands[@]}"; do
+    tool="${entry%%|*}"
+    cmd="${entry#*|}"
+
+    if ! eval "$cmd"; then
         failures+=("$tool")
     fi
 done
