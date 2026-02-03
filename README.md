@@ -23,7 +23,7 @@ A **bloat-free starter kit** for Laravel 12.x with FilamentPHP 5.x pre-configure
 - **laravel/pint** - Code style fixer
 - **pestphp/pest** - Testing framework
 - **rector/rector** - Automated refactoring
-- **barryvdh/laravel-debugbar** - Development insights
+- **fruitcake/laravel-debugbar** - Development insights
 
 ### Testing
 Includes a comprehensive test suite with **PEST 4.x** including browser testing - perfect for learning testing or as a reference for your own tests.
