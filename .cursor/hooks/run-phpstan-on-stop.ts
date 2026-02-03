@@ -60,8 +60,15 @@ async function main(): Promise<void> {
     return;
   }
 
+  const MAX_ERROR_CHARS = 1000;
+
   const { ok, output } = runCommand(COMMAND.tool, COMMAND.cmd);
   const failures = ok ? [] : [{ tool: COMMAND.tool, output }];
+
+  const truncatedOutput =
+    output && output.length > MAX_ERROR_CHARS
+      ? output.slice(0, MAX_ERROR_CHARS) + "\n… (truncated)"
+      : output || "(no output)";
 
   const result =
     failures.length > 0
@@ -70,7 +77,7 @@ async function main(): Promise<void> {
           `Please fix the errors reported by ${COMMAND.tool}.`,
           "Don't do any other investigation.",
           "",
-          `<${COMMAND.tool}-errors>\n${output || "(no output)"}\n</${COMMAND.tool}-errors>`,
+          `<${COMMAND.tool}-errors>\n${truncatedOutput}\n</${COMMAND.tool}-errors>`,
         ].join("\n"),
       }
       : {};
