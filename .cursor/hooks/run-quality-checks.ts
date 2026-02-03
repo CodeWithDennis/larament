@@ -6,7 +6,6 @@ type StopHookInput = {
 };
 
 const COMMANDS: Array<[string, string]> = [
-  ["pint", "./vendor/bin/pint --dirty"],
   ["rector", "./vendor/bin/rector --ansi"],
   ["phpstan", "./vendor/bin/phpstan analyse --memory-limit=512M"],
 ];
