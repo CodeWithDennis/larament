@@ -44,10 +44,13 @@ Comes with pre-configured GitHub Actions workflows for automated quality assuran
 composer create-project codewithdennis/larament your-project-name
 cd your-project-name 
 composer install
+php artisan boost:install
 npm install
 npm run build
 php artisan serve
 ```
+
+After `composer install`, run **`php artisan boost:install`** once per project. [Laravel Boost](https://github.com/laravel/boost) publishes IDE and tooling files (for example Cursor rules and MCP configuration) that embed your app’s real paths and local setup, so they are not committed from the starter kit and must be generated on your machine.
 
 ## Features
 
