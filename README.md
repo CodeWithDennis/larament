@@ -50,7 +50,9 @@ npm run build
 php artisan serve
 ```
 
-After `composer install`, run **`php artisan boost:install`** once per project. [Laravel Boost](https://github.com/laravel/boost) publishes IDE and tooling files (for example Cursor rules and MCP configuration) that embed your app’s real paths and local setup, so they are not committed from the starter kit and must be generated on your machine.
+After `composer install`, run **`php artisan boost:install`** once per project. [Laravel Boost](https://github.com/laravel/boost) writes the editor and assistant integrations this stack expects—guidance rules, MCP configuration, and the rest—already scoped to your paths and environment. Those files are intentionally omitted from the starter kit, so you generate them locally after install.
+
+If you use an AI-powered editor or coding assistant, enable **MCP** (Model Context Protocol) for this project in that tool’s settings, then turn on the Laravel Boost MCP server. Your assistant can then reach Boost’s Laravel-aware tools instead of working without project context.
 
 ## Features
 
