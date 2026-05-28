@@ -40,17 +40,28 @@ Comes with pre-configured GitHub Actions workflows for automated quality assuran
 
 ## Quick Start
 
+### New project
+
 ```bash
 composer create-project codewithdennis/larament your-project-name
-cd your-project-name 
-composer install
+cd your-project-name
 php artisan boost:install
-npm install
-npm run build
 php artisan serve
 ```
 
-After `composer install`, run **`php artisan boost:install`** once per project. [Laravel Boost](https://github.com/laravel/boost) writes the editor and assistant integrations this stack expects—guidance rules, MCP configuration, and the rest—already scoped to your paths and environment. Those files are intentionally omitted from the starter kit, so you generate them locally after install.
+`composer create-project` runs the project installer automatically (environment file, database, assets, and front-end build).
+
+### Existing checkout
+
+```bash
+composer setup
+php artisan boost:install
+php artisan serve
+```
+
+`composer setup` installs PHP and Node dependencies, prepares `.env`, generates an app key, runs migrations, and builds front-end assets.
+
+After setup, run **`php artisan boost:install`** once per project. [Laravel Boost](https://github.com/laravel/boost) writes the editor and assistant integrations this stack expects—guidance rules, MCP configuration, and the rest—already scoped to your paths and environment. Those files are intentionally omitted from the starter kit, so you generate them locally after install.
 
 If you use an AI-powered editor or coding assistant, enable **MCP** (Model Context Protocol) for this project in that tool’s settings, then turn on the Laravel Boost MCP server. Your assistant can then reach Boost’s Laravel-aware tools instead of working without project context.
 
