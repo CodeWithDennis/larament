@@ -6,6 +6,8 @@
 [![Total Installs](https://img.shields.io/packagist/dt/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 
+<img width="1920" height="1080" alt="larament-banner-variant-b-github" src="https://github.com/user-attachments/assets/f90db4da-dcdd-46a8-ad5b-8709213f7a89" />
+
 A **bloat-free starter kit** for Laravel 13.x with FilamentPHP 5.x pre-configured. Only essential development tools included.
 
 > [!NOTE]
