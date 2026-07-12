@@ -13,9 +13,9 @@ it('can create a new user', function () {
     visit('/admin')
         ->click('Users')
         ->click('New user')
-        ->fill('form.name', $user->name)
-        ->fill('form.email', $user->email)
-        ->fill('form.password', 'password')
+        ->fill('input[id="form.name"]', $user->name)
+        ->fill('input[id="form.email"]', $user->email)
+        ->fill('input[id="form.password"]', 'password')
         ->press('.fi-ac-btn-action[type=submit]')
         ->assertSee('Created');
 
@@ -31,7 +31,7 @@ it('can edit an existing user', function () {
     visit('/admin')
         ->click('Users')
         ->click('Edit')
-        ->fill('form.name', $newRecord->name)
+        ->fill('input[id="form.name"]', $newRecord->name)
         ->click('.fi-ac-btn-action[type=submit]')
         ->assertSee('Saved');
 
