@@ -3,6 +3,7 @@
 [![Pint](https://github.com/codewithdennis/larament/actions/workflows/pint.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
 [![PEST](https://github.com/codewithdennis/larament/actions/workflows/pest.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
 [![PHPStan](https://github.com/CodeWithDennis/larament/actions/workflows/phpstan.yml/badge.svg)](https://github.com/CodeWithDennis/larament/actions/workflows/phpstan.yml)
+[![Rector](https://github.com/CodeWithDennis/larament/actions/workflows/rector.yml/badge.svg)](https://github.com/CodeWithDennis/larament/actions/workflows/rector.yml)
 [![Total Installs](https://img.shields.io/packagist/dt/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Plumb score](https://plumbphp.dev/badges/codewithdennis/larament/composite.svg)](https://plumbphp.dev/codewithdennis/larament)
@@ -40,6 +41,7 @@ Comes with pre-configured GitHub Actions workflows for automated quality assuran
 - **Tests** - PEST 4.x testing with 4 parallel shards for faster CI/CD
 - **PHPStan** - Static analysis and type checking
 - **Pint** - Automated code style fixing with auto-commit
+- **Rector** - Automated refactoring checks in dry-run mode
 
 ## Quick Start
 
