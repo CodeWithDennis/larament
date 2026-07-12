@@ -1,6 +1,7 @@
 {
     "agents": [
-        "cursor"
+        "cursor",
+        "codex"
     ],
     "cloud": false,
     "guidelines": true,
