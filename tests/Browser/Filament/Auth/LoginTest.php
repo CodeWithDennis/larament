@@ -15,8 +15,8 @@ beforeEach(function () {
 
 test('an unauthenticated user can login', function () {
     visit('/admin/login')
-        ->fill('form.email', $this->user->email)
-        ->fill('form.password', 'password')
+        ->fill('input[id="form.email"]', $this->user->email)
+        ->fill('input[id="form.password"]', 'password')
         ->submit()
         ->assertSee('Dashboard');
 

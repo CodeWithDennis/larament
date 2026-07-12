@@ -12,7 +12,7 @@
         "laravel/tinker": "^3.0",
         "nunomaduro/essentials": "^1.2",
         "psy/psysh": "^0.12.19",
-        "symfony/process": "^7.4"
+        "symfony/process": "^7.4.5 || ^8.0.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -25,7 +25,7 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "pestphp/pest": "^v4.3.0",
-        "pestphp/pest-plugin-browser": "v4.0.3",
+        "pestphp/pest-plugin-browser": "^4.3.1",
         "pestphp/pest-plugin-faker": "^v4.0.0",
         "pestphp/pest-plugin-laravel": "^v4.0.0",
         "pestphp/pest-plugin-livewire": "^v4.0.1",
