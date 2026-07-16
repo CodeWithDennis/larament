@@ -14,7 +14,7 @@
 A **bloat-free starter kit** for Laravel 13.x with FilamentPHP 5.x pre-configured. Only essential development tools included.
 
 > [!NOTE]
-> Requires **PHP 8.3** or higher.
+> Requires **PHP 8.4** or higher.
 
 ## What's Included
 
@@ -43,7 +43,6 @@ Comes with pre-configured GitHub Actions workflows for automated quality assuran
 - **PHPStan** - Static analysis and type checking
 - **Pint** - Automated code style fixing with auto-commit
 - **Rector** - Automated refactoring checks in dry-run mode
-- **Installation** - `composer create-project` smoke tests on Ubuntu, macOS, and Windows (PHP 8.4 and 8.5), including post-install cleanup
 
 ## Quick Start
 
