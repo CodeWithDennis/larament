@@ -13,7 +13,6 @@ use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Override;
 
 final class User extends Authenticatable implements FilamentUser, HasAppAuthentication, HasAppAuthenticationRecovery
 {
@@ -25,7 +24,6 @@ final class User extends Authenticatable implements FilamentUser, HasAppAuthenti
      *
      * @var list<string>
      */
-    #[Override]
     protected $hidden = [
         'password',
         'remember_token',
