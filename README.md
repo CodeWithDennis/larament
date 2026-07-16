@@ -4,6 +4,7 @@
 [![PEST](https://github.com/codewithdennis/larament/actions/workflows/pest.yml/badge.svg)](https://packagist.org/packages/codewithdennis/larament)
 [![PHPStan](https://github.com/CodeWithDennis/larament/actions/workflows/phpstan.yml/badge.svg)](https://github.com/CodeWithDennis/larament/actions/workflows/phpstan.yml)
 [![Rector](https://github.com/CodeWithDennis/larament/actions/workflows/rector.yml/badge.svg)](https://github.com/CodeWithDennis/larament/actions/workflows/rector.yml)
+[![Installation](https://github.com/CodeWithDennis/larament/actions/workflows/installation.yml/badge.svg)](https://github.com/CodeWithDennis/larament/actions/workflows/installation.yml)
 [![Total Installs](https://img.shields.io/packagist/dt/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/larament.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/larament)
 [![Plumb](https://plumbphp.dev/badges/codewithdennis/larament/composite.svg)](https://plumbphp.dev/codewithdennis/larament)
@@ -42,6 +43,7 @@ Comes with pre-configured GitHub Actions workflows for automated quality assuran
 - **PHPStan** - Static analysis and type checking
 - **Pint** - Automated code style fixing with auto-commit
 - **Rector** - Automated refactoring checks in dry-run mode
+- **Installation** - `composer create-project` smoke tests on Ubuntu, macOS, and Windows (PHP 8.4 and 8.5), including post-install cleanup
 
 ## Quick Start
 
