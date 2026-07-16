@@ -12,7 +12,6 @@
 /.env export-ignore
 /AGENTS.md export-ignore
 /boost.json export-ignore
-/cleanup.php export-ignore
 /bootstrap/cache/*.php export-ignore
 /database/database.sqlite export-ignore
 /node_modules export-ignore
