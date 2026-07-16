@@ -14,7 +14,7 @@
 A **bloat-free starter kit** for Laravel 13.x with FilamentPHP 5.x pre-configured. Only essential development tools included.
 
 > [!NOTE]
-> Requires **PHP 8.4** or higher.
+> Requires **PHP 8.3** or higher.
 
 ## What's Included
 
