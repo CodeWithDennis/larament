@@ -15,34 +15,6 @@ A **bloat-free starter kit** for Laravel 13.x with FilamentPHP 5.x pre-configure
 > [!NOTE]
 > Requires **PHP 8.3** or higher.
 
-## What's Included
-
-### Core Dependencies
-- **Laravel 13.x** - The PHP framework
-- **FilamentPHP 5.x** - Admin panel with SPA mode, custom theme, and MFA enabled
-- **nunomaduro/essentials** - Better Laravel defaults (strict models, auto-eager loading, immutable dates)
-
-### Development Tools
-- **larastan/larastan** - Static analysis
-- **laravel/pint** - Code style fixer
-- **pestphp/pest** - Testing framework
-- **rector/rector** - Automated refactoring
-- **fruitcake/laravel-debugbar** - Development insights
-
-### Testing
-Includes a comprehensive test suite with **PEST 4.x** — perfect for learning testing or as a reference for your own tests.
-
-![Tests](resources/images/tests.png)
-
-## GitHub Workflows
-
-Comes with pre-configured GitHub Actions workflows for automated quality assurance:
-
-- **Tests** - PEST 4.x testing with 4 parallel shards for faster CI/CD
-- **PHPStan** - Static analysis and type checking
-- **Pint** - Automated code style fixing with auto-commit
-- **Rector** - Automated refactoring checks in dry-run mode
-
 ## Quick Start
 
 ### New project
@@ -70,6 +42,25 @@ After setup, run **`php artisan boost:install`** once per project. [Laravel Boos
 
 If you use an AI-powered editor or coding assistant, enable **MCP** (Model Context Protocol) for this project in that tool’s settings, then turn on the Laravel Boost MCP server. Your assistant can then reach Boost’s Laravel-aware tools instead of working without project context.
 
+## What's Included
+
+### Core Dependencies
+- **Laravel 13.x** - The PHP framework
+- **FilamentPHP 5.x** - Admin panel with SPA mode, custom theme, and MFA enabled
+- **nunomaduro/essentials** - Better Laravel defaults (strict models, auto-eager loading, immutable dates)
+
+### Development Tools
+- **larastan/larastan** - Static analysis
+- **laravel/pint** - Code style fixer
+- **pestphp/pest** - Testing framework
+- **rector/rector** - Automated refactoring
+- **fruitcake/laravel-debugbar** - Development insights
+
+### Testing
+Includes a comprehensive test suite with **PEST 4.x** — perfect for learning testing or as a reference for your own tests.
+
+![Tests](resources/images/tests.png)
+
 ## Features
 
 ### Filament Admin Panel
@@ -91,6 +82,15 @@ If you use an AI-powered editor or coding assistant, enable **MCP** (Model Conte
 ```bash
 composer review  # Runs Pint, Rector, PHPStan, and Pest
 ```
+
+## GitHub Workflows
+
+Comes with pre-configured GitHub Actions workflows for automated quality assurance:
+
+- **Tests** - PEST 4.x testing with 4 parallel shards for faster CI/CD
+- **PHPStan** - Static analysis and type checking
+- **Pint** - Automated code style fixing with auto-commit
+- **Rector** - Automated refactoring checks in dry-run mode
 
 ## Customizations
 
