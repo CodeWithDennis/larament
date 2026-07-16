@@ -18,6 +18,8 @@ jobs:
 
     env:
       COMPOSER_MIRROR_PATH_REPOS: 1
+      SOURCE_DIR: larament-source
+      INSTALL_DIR: larament-install
 
     steps:
       - name: Checkout
@@ -27,7 +29,7 @@ jobs:
         uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, intl, gd
+          extensions: dom, curl, libxml, mbstring, zip, pdo, sqlite, pdo_sqlite, bcmath, intl, gd
           coverage: none
           tools: composer
 
@@ -38,22 +40,19 @@ jobs:
 
       - name: Prepare dist-like package source
         run: |
-          SOURCE_DIR="${RUNNER_TEMP}/larament-source"
+          rm -rf "${SOURCE_DIR}" "${INSTALL_DIR}"
           mkdir -p "${SOURCE_DIR}"
           git archive HEAD | tar -x -C "${SOURCE_DIR}"
-          echo "SOURCE_DIR=${SOURCE_DIR}" >> "${GITHUB_ENV}"
 
       - name: Create project
         run: |
-          INSTALL_DIR="${RUNNER_TEMP}/larament-install"
           composer create-project \
             --prefer-dist \
             --no-interaction \
             --stability=dev \
             codewithdennis/larament \
             "${INSTALL_DIR}" \
-            --repository="{\"type\":\"path\",\"url\":\"${SOURCE_DIR}\",\"options\":{\"symlink\":false}}"
-          echo "INSTALL_DIR=${INSTALL_DIR}" >> "${GITHUB_ENV}"
+            --repository="{\"type\":\"path\",\"url\":\"./${SOURCE_DIR}\",\"options\":{\"symlink\":false}}"
 
       - name: Assert installation and cleanup
         run: |
