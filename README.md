@@ -30,7 +30,7 @@ A **bloat-free starter kit** for Laravel 13.x with FilamentPHP 5.x pre-configure
 - **fruitcake/laravel-debugbar** - Development insights
 
 ### Testing
-Includes a comprehensive test suite with **PEST 4.x** including browser testing - perfect for learning testing or as a reference for your own tests.
+Includes a comprehensive test suite with **PEST 4.x** — perfect for learning testing or as a reference for your own tests.
 
 ![Tests](resources/images/tests.png)
 

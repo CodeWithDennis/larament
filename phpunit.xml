@@ -11,9 +11,6 @@
         <testsuite name="Feature">
             <directory>tests/Feature</directory>
         </testsuite>
-        <testsuite name="Browser">
-            <directory>tests/Browser</directory>
-        </testsuite>
     </testsuites>
     <source>
         <include>
