@@ -1,6 +1,6 @@
 ---
 name: pest-testing
-description: "Use this skill for Pest PHP testing in Laravel projects only. Trigger whenever any test is being written, edited, fixed, or refactored — including fixing tests that broke after a code change, adding assertions, converting PHPUnit to Pest, adding datasets, and TDD workflows. Always activate when the user asks how to write something in Pest, mentions test files or directories (tests/Feature, tests/Unit, tests/Browser), or needs browser testing, smoke testing multiple pages for JS errors, or architecture tests. Covers: test()/it()/expect() syntax, datasets, mocking, browser testing (visit/click/fill), smoke testing, arch(), Livewire component tests, RefreshDatabase, and all Pest 4 features. Do not use for factories, seeders, migrations, controllers, models, or non-test PHP code."
+description: "Use this skill for Pest PHP testing in Laravel projects only. Trigger whenever any test is being written, edited, fixed, or refactored — including fixing tests that broke after a code change, adding assertions, converting PHPUnit to Pest, adding datasets, and TDD workflows. Always activate when the user asks how to write something in Pest, mentions test files or directories (tests/Feature, tests/Unit), or architecture tests. Covers: test()/it()/expect() syntax, datasets, mocking, arch(), Livewire component tests, RefreshDatabase, and Pest 4 features used in this project. Do not use for factories, seeders, migrations, controllers, models, or non-test PHP code."
 license: MIT
 metadata:
   author: laravel
@@ -27,7 +27,6 @@ The `{name}` argument should include only the path and test name, but should not
 ### Test Organization
 
 - Unit/Feature tests: `tests/Feature` and `tests/Unit` directories.
-- Browser tests: `tests/Browser/` directory.
 - Do NOT remove tests without approval - these are core application code.
 
 ### Basic Test Structure
@@ -86,59 +85,8 @@ it('has emails', function (string $email) {
 
 | Feature | Purpose |
 |---------|---------|
-| Browser Testing | Full integration tests in real browsers |
-| Smoke Testing | Validate multiple pages quickly |
-| Visual Regression | Compare screenshots for visual changes |
 | Test Sharding | Parallel CI runs |
 | Architecture Testing | Enforce code conventions |
-
-### Browser Test Example
-
-Browser tests run in real browsers for full integration testing:
-
-- Browser tests live in `tests/Browser/`.
-- Use Laravel features like `Event::fake()`, `assertAuthenticated()`, and model factories.
-- Use `RefreshDatabase` for clean state per test.
-- Interact with page: click, type, scroll, select, submit, drag-and-drop, touch gestures.
-- Test on multiple browsers (Chrome, Firefox, Safari) if requested.
-- Test on different devices/viewports (iPhone 14 Pro, tablets) if requested.
-- Switch color schemes (light/dark mode) when appropriate.
-- Take screenshots or pause tests for debugging.
-
-<!-- Pest Browser Test Example -->
-```php
-it('may reset the password', function () {
-    Notification::fake();
-
-    $this->actingAs(User::factory()->create());
-
-    $page = visit('/sign-in');
-
-    $page->assertSee('Sign In')
-        ->assertNoJavaScriptErrors()
-        ->click('Forgot Password?')
-        ->fill('email', 'nuno@laravel.com')
-        ->click('Send Reset Link')
-        ->assertSee('We have emailed your password reset link!');
-
-    Notification::assertSent(ResetPassword::class);
-});
-```
-
-### Smoke Testing
-
-Quickly validate multiple pages have no JavaScript errors:
-
-<!-- Pest Smoke Testing Example -->
-```php
-$pages = visit(['/', '/about', '/contact']);
-
-$pages->assertNoJavaScriptErrors()->assertNoConsoleLogs();
-```
-
-### Visual Regression Testing
-
-Capture and compare screenshots to detect visual changes.
 
 ### Test Sharding
 
@@ -162,5 +110,4 @@ arch('controllers')
 - Using `assertStatus(200)` instead of `assertSuccessful()`
 - Forgetting datasets for repetitive validation tests
 - Deleting tests without approval
-- Forgetting `assertNoJavaScriptErrors()` in browser tests
 - Prefixing `Feature/` or `Unit/` in `{name}` when using `make:test`

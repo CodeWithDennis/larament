@@ -7,16 +7,13 @@
         "dev": "vite"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.3.2",
-        "@types/node": "^25.2.0",
+        "@tailwindcss/vite": "^4.3.3",
+        "@types/node": "^26.1.1",
         "axios": "^1.18.1",
         "concurrently": "^10.0.3",
-        "laravel-vite-plugin": "^3.1.0",
-        "tailwindcss": "^4.1.10",
-        "tsx": "^4.21.0",
-        "vite": "^8.1.3"
-    },
-    "dependencies": {
-        "playwright": "^1.61.1"
+        "laravel-vite-plugin": "^3.1.3",
+        "tailwindcss": "^4.3.3",
+        "tsx": "^4.23.1",
+        "vite": "^8.1.5"
     }
 }
