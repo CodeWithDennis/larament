@@ -11,5 +11,7 @@
 /.agents export-ignore
 /.codex export-ignore
 /AGENTS.md export-ignore
+/README.md export-ignore
+/resources/images export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore

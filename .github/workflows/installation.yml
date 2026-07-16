@@ -1,0 +1,77 @@
+name: Installation
+
+on: [push]
+
+jobs:
+  installation:
+    name: create-project (${{ matrix.os }}, PHP ${{ matrix.php }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        php: ['8.4', '8.5']
+
+    defaults:
+      run:
+        shell: bash
+
+    env:
+      COMPOSER_MIRROR_PATH_REPOS: 1
+      SOURCE_DIR: larament-source
+      INSTALL_DIR: larament-install
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, fileinfo, pdo, sqlite, pdo_sqlite, bcmath, intl, gd
+          coverage: none
+          tools: composer
+
+      - name: Setup Node
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: lts/*
+
+      - name: Prepare dist-like package source
+        run: |
+          rm -rf "${SOURCE_DIR}" "${INSTALL_DIR}"
+          mkdir -p "${SOURCE_DIR}"
+          git archive HEAD | tar -x -C "${SOURCE_DIR}"
+
+      - name: Create project
+        run: |
+          composer create-project \
+            --prefer-dist \
+            --no-interaction \
+            --stability=dev \
+            codewithdennis/larament \
+            "${INSTALL_DIR}" \
+            --repository="{\"type\":\"path\",\"url\":\"./${SOURCE_DIR}\",\"options\":{\"symlink\":false}}"
+
+      - name: Assert installation and cleanup
+        run: |
+          set -euo pipefail
+
+          test -f "${INSTALL_DIR}/.env"
+          test -f "${INSTALL_DIR}/vendor/autoload.php"
+          test -f "${INSTALL_DIR}/database/database.sqlite"
+          test -d "${INSTALL_DIR}/public/build"
+          test -f "${INSTALL_DIR}/README.md"
+          test ! -f "${INSTALL_DIR}/cleanup.php"
+          test ! -f "${INSTALL_DIR}/app/Console/Commands/Welcome.php"
+          test ! -d "${INSTALL_DIR}/resources/images"
+
+          if [[ -s "${INSTALL_DIR}/README.md" ]]; then
+            echo "Expected README.md to be empty after cleanup."
+            exit 1
+          fi
+
+          cd "${INSTALL_DIR}"
+          php artisan --version
+          php artisan about --only=environment
