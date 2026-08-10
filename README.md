@@ -52,13 +52,14 @@ If you use an AI-powered editor or coding assistant, enable **MCP** (Model Conte
 
 ### Development Tools
 - **larastan/larastan** - Static analysis
+- **barryvdh/laravel-ide-helper** - IDE autocompletion metadata
 - **laravel/pint** - Code style fixer
 - **pestphp/pest** - Testing framework
 - **rector/rector** - Automated refactoring
 - **fruitcake/laravel-debugbar** - Development insights
 
 ### Testing
-Includes a comprehensive test suite with **PEST 4.x** — perfect for learning testing or as a reference for your own tests.
+Includes a comprehensive test suite with **PEST 5.x** — perfect for learning testing or as a reference for your own tests.
 
 ![Tests](resources/images/tests.png)
 
@@ -88,7 +89,7 @@ composer review  # Runs Pint, Rector, PHPStan, and Pest
 
 Comes with pre-configured GitHub Actions workflows for automated quality assurance:
 
-- **Tests** - PEST 4.x testing with 4 parallel shards for faster CI/CD
+- **Tests** - PEST 5.x testing with 4 parallel shards for faster CI/CD
 - **PHPStan** - Static analysis and type checking
 - **Pint** - Automated code style fixing with auto-commit
 - **Rector** - Automated refactoring checks in dry-run mode
