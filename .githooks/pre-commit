@@ -1,0 +1,65 @@
+#!/bin/sh
+# Composer Audit
+echo "🔒 Running Composer Audit..."
+composer audit --no-dev
+if [ $? -ne 0 ]; then
+  echo "❌ Composer audit failed. Fix vulnerabilities before committing."
+  exit 1
+fi
+
+# Run code quality tools before commit
+echo "📚 Generating IDE Helper files..."
+php artisan ide-helper:generate
+if [ $? -ne 0 ]; then
+  echo "❌ ide-helper:generate failed."
+  exit 1
+fi
+
+php artisan ide-helper:models --write --no-interaction
+if [ $? -ne 0 ]; then
+  echo "❌ ide-helper:models failed."
+  exit 1
+fi
+
+php artisan ide-helper:meta
+if [ $? -ne 0 ]; then
+  echo "❌ ide-helper:meta failed."
+  exit 1
+fi
+
+echo "Running Pest Test Cases"
+echo "🧹 Clearing config cache to ensure testing environment..."
+php artisan config:clear
+./vendor/bin/pest
+if [ $? -ne 0 ]; then
+    echo "❌ Pest tests failed. Fix errors before committing."
+    echo "🧹 Recaching config..."
+    php artisan config:cache
+    exit 1
+fi
+echo "🧹 Recaching config..."
+php artisan config:cache
+
+
+echo "🔍 Running Larastan..."
+./vendor/bin/phpstan analyse --memory-limit=1G
+if [ $? -ne 0 ]; then
+  echo "❌ Larastan failed. Fix errors before committing."
+  exit 1
+fi
+
+echo "✨ Running Laravel Pint..."
+./vendor/bin/pint
+if [ $? -ne 0 ]; then
+  echo "❌ Pint failed."
+  exit 1
+fi
+
+echo "🛠 Running Rector..."
+./vendor/bin/rector process
+if [ $? -ne 0 ]; then
+  echo "❌ Rector failed."
+  exit 1
+fi
+
+echo "✅ All checks passed!"
