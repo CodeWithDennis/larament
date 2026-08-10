@@ -15,6 +15,7 @@
         "symfony/process": "^7.4.5 || ^8.0.5"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.7",
         "fakerphp/faker": "^1.23",
         "fruitcake/laravel-debugbar": "^4.0",
         "larastan/larastan": "^3.0",
@@ -47,6 +48,9 @@
         }
     },
     "scripts": {
+        "post-install-cmd": [
+            "git config core.hooksPath .githooks || true"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
