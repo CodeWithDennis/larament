@@ -3,10 +3,10 @@
 @source '../../../../app/Filament/**/*';
 @source '../../../../resources/views/filament/**/*';
 
-.fi-sidebar-nav {
+.fi-sidebar {
     border-right: 1px solid #e4e4e5;
 }
 
-.dark .fi-sidebar-nav {
-    border-right: 1px solid  #18181B;
+.dark .fi-sidebar {
+    border-right: 1px solid #18181B;
 }
