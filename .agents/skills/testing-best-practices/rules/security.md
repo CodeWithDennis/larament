@@ -19,7 +19,7 @@ it('escapes dangerous content in the notification', function () {
     $content = (new QuotaApproaching($organization, 80))->toMail()->render();
 
     expect($content)
-        ->toContain('<script>')
+        ->toContain('&lt;script&gt;')
         ->not->toContain("<script>alert('xss')</script>");
 });
 ```
