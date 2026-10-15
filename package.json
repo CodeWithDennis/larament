@@ -8,12 +8,12 @@
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.3.3",
-        "@types/node": "^26.4.1",
+        "@types/node": "^26.6.5",
         "axios": "^1.20.0",
-        "concurrently": "^10.0.5",
+        "concurrently": "^10.0.6",
         "laravel-vite-plugin": "^3.2.0",
         "tailwindcss": "^4.3.3",
-        "tsx": "^4.23.13",
-        "vite": "^8.2.2"
+        "tsx": "^4.23.15",
+        "vite": "^8.3.4"
     }
 }

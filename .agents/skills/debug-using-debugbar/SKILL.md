@@ -35,25 +35,19 @@ or trigger it yourself, then run `debugbar:find` again.
 ## Finding requests
 
 ```bash
-
 # List recent requests (shows summary with status, duration, memory, query count)
-
 php artisan debugbar:find
 
 # Filter by URI pattern (fnmatch) and/or HTTP method
-
 php artisan debugbar:find --uri="/api/*" --method=POST
 
 # Only show requests with issues (exceptions, slow queries, duplicates, errors)
-
 php artisan debugbar:find --issues --max=50
 
 # Customize issue thresholds (defaults: --min-queries=50, --min-duration=1000, --min-duplicates=2)
-
 php artisan debugbar:find --issues --min-queries=10 --min-duration=500
 
 # Threshold options also work standalone, filtering on just that criteria
-
 php artisan debugbar:find --min-queries=20
 ```
 
@@ -63,22 +57,17 @@ Queued jobs and Artisan commands are stored too, with `method` set to `JOB` or `
 
 ```bash
 php artisan debugbar:find --method=JOB      # queued jobs
-
 php artisan debugbar:find --method=CLI      # artisan commands
-
 ```
 
 ## Inspecting a request
 
 ```bash
-
 # Summary of all collectors (available collectors depend on config)
-
 php artisan debugbar:get latest
 php artisan debugbar:get {id}
 
 # Full data for a specific collector
-
 php artisan debugbar:get {id} --collector=exceptions
 ```
 
@@ -92,17 +81,13 @@ If the collector name is wrong, the command lists the collectors that actually h
 ## Analyzing queries
 
 ```bash
-
 # Overview with duplicate detection, slow flags and failed statements
-
 php artisan debugbar:queries {id}
 
 # Backtrace and params for a specific statement
-
 php artisan debugbar:queries {id} --statement=N
 
 # EXPLAIN plan or re-execute a SELECT
-
 php artisan debugbar:queries {id} --statement=N --explain
 php artisan debugbar:queries {id} --statement=N --result
 ```
@@ -122,11 +107,8 @@ All three read commands accept `--json`, which is easier to parse than the table
 
 ```bash
 php artisan debugbar:find --issues --json     # array of requests, each with an `issues` list
-
 php artisan debugbar:queries {id} --json      # statements plus `duplicate_groups` and `n_plus_one_groups`
-
 php artisan debugbar:get {id} --json          # raw collector data (`--raw` is the same thing)
-
 ```
 
 ## Gotchas

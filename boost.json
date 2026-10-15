@@ -17,6 +17,7 @@
         "laravel-best-practices",
         "testing-best-practices",
         "tailwindcss-development",
+        "filament-development",
         "debug-using-debugbar"
     ]
 }
