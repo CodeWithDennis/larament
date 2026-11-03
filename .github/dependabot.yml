@@ -1,23 +1,29 @@
 version: 2
 
+# All Composer, npm and GitHub Actions updates are bundled into a single weekly PR.
+multi-ecosystem-groups:
+  dependencies:
+    schedule:
+      interval: "weekly"
+
 updates:
   - package-ecosystem: "composer"
     directory: "/"
-    schedule:
-      interval: "weekly"
+    patterns: ["*"]
+    multi-ecosystem-group: "dependencies"
     cooldown:
       default-days: 7
 
   - package-ecosystem: "npm"
     directory: "/"
-    schedule:
-      interval: "weekly"
+    patterns: ["*"]
+    multi-ecosystem-group: "dependencies"
     cooldown:
       default-days: 7
 
   - package-ecosystem: "github-actions"
     directory: "/"
-    schedule:
-      interval: "weekly"
+    patterns: ["*"]
+    multi-ecosystem-group: "dependencies"
     cooldown:
       default-days: 7
